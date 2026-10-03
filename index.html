@@ -1,0 +1,2336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ALJAY JOSH A. PASSILAN — Bodycam &amp; True Crime Thumbnail Designer</title>
+<meta name="description" content="Portfolio of Aljay Josh A. Passilan, YouTube thumbnail designer specializing in police bodycam and true-crime thumbnails. AI-assisted concepts built with the ChatG Method: ChatGPT for creative direction, Gemini for visual generation.">
+<meta name="theme-color" content="#080808">
+<meta property="og:title" content="ALJAY JOSH A. PASSILAN — Bodycam &amp; True Crime Thumbnail Designer">
+<meta property="og:description" content="I turn YouTube titles into visual stories.">
+<meta property="og:image" content="bodycam-01.png">
+
+<!-- Marks the page as JS-enabled so reveal animations only hide content when JS can show it again -->
+<script>document.documentElement.classList.add('js');</script>
+
+<!-- Optional web font. The site falls back to system fonts if this cannot load. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* ==========================================================================
+   1. TOKENS
+   ========================================================================== */
+:root {
+  --bg: #080808;
+  --bg-2: #101010;
+  --card: #151515;
+  --line: #272727;
+  --text: #F5F5F5;
+  --text-2: #A1A1A1;
+  --muted: #666666;
+  --red: #FF3B30;
+
+  --font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  --nav-h: 72px;
+  --pad: clamp(20px, 4vw, 56px);
+  --max: 1360px;
+  --ease: cubic-bezier(.2, .7, .2, 1);
+}
+
+/* ==========================================================================
+   2. BASE
+   ========================================================================== */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: calc(var(--nav-h) + 12px);
+}
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 1rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; text-align: inherit; }
+h1, h2, h3, h4, p, ul, ol, dl, dd, figure { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+
+:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
+
+::selection { background: var(--red); color: #080808; }
+
+.container {
+  width: 100%;
+  max-width: var(--max);
+  margin-inline: auto;
+  padding-inline: var(--pad);
+}
+
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -80px;
+  z-index: 200;
+  background: var(--text);
+  color: #080808;
+  padding: 12px 18px;
+  font-weight: 700;
+  font-size: .85rem;
+  transition: top .2s;
+}
+.skip-link:focus { top: 12px; outline-color: #080808; }
+
+/* ==========================================================================
+   3. SHARED COMPONENTS
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .65em;
+  min-height: 48px;
+  padding: 0 26px;
+  border: 1px solid transparent;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: background-color .25s, color .25s, border-color .25s;
+}
+.btn .arr { display: inline-block; transition: transform .3s var(--ease); }
+.btn:hover .arr, .btn:focus-visible .arr { transform: translateX(5px); }
+
+.btn-primary { background: var(--red); color: #080808; }
+.btn-primary:hover { background: var(--text); }
+.btn-primary:focus-visible { outline-color: var(--text); }
+
+.btn-ghost { border-color: #3a3a3a; color: var(--text); }
+.btn-ghost:hover { border-color: var(--text); background: rgba(255,255,255,.05); }
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  color: var(--red);
+}
+.label::before {
+  content: "";
+  width: 28px;
+  height: 2px;
+  background: var(--red);
+  flex: none;
+}
+
+.h2 {
+  margin-top: 22px;
+  font-size: clamp(2rem, 4.6vw, 4.2rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -.035em;
+  text-wrap: balance;
+}
+.section-desc {
+  margin-top: 26px;
+  max-width: 58ch;
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  color: var(--text-2);
+}
+
+.section { padding-block: clamp(80px, 11vw, 160px); }
+.section-head { max-width: 940px; margin-bottom: clamp(48px, 7vw, 96px); }
+.section--alt { background: var(--bg-2); border-block: 1px solid var(--line); }
+
+.sub-title {
+  font-size: clamp(1.5rem, 2.8vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: -.03em;
+  line-height: 1.05;
+}
+
+/* Scroll reveal (only active when JS is present) */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .9s var(--ease), transform .9s var(--ease);
+  transition-delay: var(--d, 0s);
+}
+.js .reveal.in { opacity: 1; transform: none; }
+
+/* Missing-image helper: shows which file to place beside index.html */
+[data-missing]::before {
+  content: "Missing image: " attr(data-missing);
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  text-align: center;
+  font-size: .8rem;
+  color: var(--text-2);
+}
+img.is-missing { visibility: hidden; }
+
+/* ==========================================================================
+   4. HEADER / NAVIGATION
+   ========================================================================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  background: rgba(8, 8, 8, .95);
+  border-bottom: 1px solid var(--line);
+}
+.nav {
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.brand { display: flex; flex-direction: column; line-height: 1.2; min-width: 0; }
+.brand-name { font-size: .95rem; font-weight: 800; letter-spacing: .06em; white-space: nowrap; }
+.brand-sub { font-size: .72rem; color: var(--text-2); letter-spacing: .04em; }
+
+.nav-links { display: flex; gap: clamp(22px, 3.2vw, 44px); }
+.nav-links a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 0;
+  font-size: .84rem;
+  font-weight: 500;
+  color: var(--text-2);
+  transition: color .2s;
+}
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 4px;
+  height: 2px;
+  background: var(--red);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .35s var(--ease);
+}
+.nav-links a:hover, .nav-links a.active { color: var(--text); }
+.nav-links a:hover::after, .nav-links a.active::after { transform: scaleX(1); }
+
+.nav-cta { min-height: 42px; padding: 0 20px; }
+
+.burger {
+  display: none;
+  position: relative;
+  width: 44px;
+  height: 44px;
+  margin-right: -10px;
+}
+.burger span {
+  position: absolute;
+  left: 11px; right: 11px;
+  height: 2px;
+  background: var(--text);
+  transition: transform .4s var(--ease), top .4s var(--ease), opacity .2s;
+}
+.burger span:nth-child(1) { top: 16px; }
+.burger span:nth-child(2) { top: 21px; }
+.burger span:nth-child(3) { top: 26px; }
+.burger[aria-expanded="true"] span:nth-child(1) { top: 21px; transform: rotate(45deg); }
+.burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.burger[aria-expanded="true"] span:nth-child(3) { top: 21px; transform: rotate(-45deg); }
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 100%; left: 0; right: 0;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+  padding: 12px var(--pad) 32px;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity .3s, transform .4s var(--ease), visibility 0s .4s;
+}
+.mobile-menu.open {
+  visibility: visible;
+  opacity: 1;
+  transform: none;
+  transition-delay: 0s;
+}
+.mobile-menu li {
+  border-bottom: 1px solid var(--line);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity .4s var(--ease), transform .4s var(--ease);
+}
+.mobile-menu.open li {
+  opacity: 1;
+  transform: none;
+  transition-delay: calc(var(--i) * 55ms + 90ms);
+}
+.mobile-menu li a:not(.btn) {
+  display: block;
+  padding: 18px 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -.02em;
+}
+.mobile-menu li a.active { color: var(--red); }
+.mobile-menu li.menu-cta { border: 0; padding-top: 24px; }
+.mobile-menu .btn { width: 100%; }
+
+@media (max-width: 899px) {
+  .nav-links, .nav-cta { display: none; }
+  .burger { display: block; }
+  .mobile-menu { display: block; }
+}
+
+/* ==========================================================================
+   5. HERO
+   ========================================================================== */
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: calc(100svh - var(--nav-h));
+  padding-block: clamp(40px, 6vw, 88px) clamp(88px, 10vw, 128px);
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, .8fr) minmax(0, 1.35fr);
+  gap: clamp(32px, 4.5vw, 72px);
+  align-items: center;
+}
+.hero-title {
+  margin-top: 26px;
+  font-size: clamp(2.3rem, 4.2vw, 4.3rem);
+  font-weight: 800;
+  line-height: .98;
+  letter-spacing: -.04em;
+  text-wrap: balance;
+}
+.hero-lead {
+  margin-top: 28px;
+  max-width: 46ch;
+  font-size: clamp(1rem, 1.25vw, 1.15rem);
+  color: var(--text-2);
+}
+.btn-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 36px; }
+
+/* Viewfinder frame around the hero thumbnail */
+.viewfinder { position: relative; padding: 14px; }
+.viewfinder i {
+  position: absolute;
+  width: 22px; height: 22px;
+  border: 2px solid var(--red);
+  pointer-events: none;
+}
+.viewfinder i:nth-of-type(1) { top: 0; left: 0; border-right: 0; border-bottom: 0; }
+.viewfinder i:nth-of-type(2) { top: 0; right: 0; border-left: 0; border-bottom: 0; }
+.viewfinder i:nth-of-type(3) { bottom: 0; left: 0; border-right: 0; border-top: 0; }
+.viewfinder i:nth-of-type(4) { bottom: 0; right: 0; border-left: 0; border-top: 0; }
+
+.frame {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--card);
+}
+.frame img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 1.4s var(--ease);
+}
+.hero-visual:hover .frame img { transform: scale(1.03); }
+
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 30px;
+  padding: 16px 14px 0;
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .16em;
+  color: var(--text-2);
+}
+.hero-meta span:first-child { color: var(--text); }
+.hero-meta span:first-child::before {
+  content: "";
+  display: inline-block;
+  width: 7px; height: 7px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: var(--red);
+  vertical-align: 1px;
+}
+
+.scroll-cue {
+  position: absolute;
+  left: 50%;
+  bottom: 28px;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-size: .66rem;
+  font-weight: 600;
+  letter-spacing: .28em;
+  color: var(--text-2);
+  transition: color .2s;
+}
+.scroll-cue:hover { color: var(--text); }
+.scroll-cue .line { position: relative; width: 1px; height: 40px; overflow: hidden; background: var(--line); }
+.scroll-cue .line::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--red);
+  transform: translateY(-100%);
+  animation: cue 2.2s var(--ease) infinite;
+}
+@keyframes cue {
+  0% { transform: translateY(-100%); }
+  60%, 100% { transform: translateY(100%); }
+}
+
+/* One orchestrated page-load moment */
+@keyframes rise {
+  from { opacity: 0; transform: translateY(26px); }
+  to   { opacity: 1; transform: none; }
+}
+.hero-copy > * { animation: rise 1s var(--ease) both; }
+.hero-copy > *:nth-child(1) { animation-delay: .05s; }
+.hero-copy > *:nth-child(2) { animation-delay: .15s; }
+.hero-copy > *:nth-child(3) { animation-delay: .3s; }
+.hero-copy > *:nth-child(4) { animation-delay: .42s; }
+.hero-visual { animation: rise 1.2s var(--ease) .25s both; }
+
+@media (max-width: 900px) {
+  .hero { min-height: 0; padding-bottom: 96px; }
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-title { font-size: clamp(2.3rem, 9vw, 3.6rem); }
+}
+@media (max-width: 560px) {
+  .hero .btn-row .btn { width: 100%; }
+  .viewfinder { padding: 10px; }
+}
+@media (max-width: 700px), (max-height: 640px) {
+  .scroll-cue { display: none; }
+  .hero { padding-bottom: 64px; }
+}
+
+/* ==========================================================================
+   7. PROJECT MODAL
+   ========================================================================== */
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(0px, 3vw, 32px);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .3s, visibility 0s .3s;
+}
+.modal.open { visibility: visible; opacity: 1; transition: opacity .3s; }
+.modal-backdrop { position: absolute; inset: 0; background: rgba(0, 0, 0, .84); }
+
+.modal-panel {
+  position: relative;
+  width: 100%;
+  max-width: 1120px;
+  max-height: 100%;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  transform: translateY(26px) scale(.985);
+  transition: transform .5s var(--ease);
+}
+.modal.open .modal-panel { transform: none; }
+
+.modal-bar {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px clamp(16px, 3vw, 32px);
+  background: var(--bg-2);
+  border-bottom: 1px solid var(--line);
+}
+.modal-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 16px; font-size: .74rem; font-weight: 700; letter-spacing: .16em; }
+.modal-num { color: var(--red); }
+.modal-cat { color: var(--text-2); }
+
+.modal-close {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 0 16px;
+  border: 1px solid #3a3a3a;
+  font-size: .74rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  transition: background-color .25s, border-color .25s, color .25s;
+}
+.modal-close:hover { background: var(--red); border-color: var(--red); color: #080808; }
+.modal-close svg { width: 14px; height: 14px; }
+
+.modal-media { position: relative; aspect-ratio: 16 / 9; background: var(--card); }
+.modal-media img { width: 100%; height: 100%; object-fit: cover; }
+
+.modal-content { padding: clamp(24px, 4vw, 56px); }
+.modal-title {
+  max-width: 26ch;
+  font-size: clamp(1.5rem, 3vw, 2.6rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -.03em;
+  text-wrap: balance;
+}
+.modal-note { margin-top: 14px; font-size: .95rem; color: var(--text-2); }
+.modal-cols {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: clamp(28px, 5vw, 72px);
+  margin-top: clamp(28px, 4vw, 48px);
+}
+.modal h3.m-label {
+  margin-bottom: 18px;
+  font-size: .74rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  color: var(--red);
+}
+.modal-concept { color: var(--text-2); max-width: 56ch; }
+
+.direction > div {
+  display: grid;
+  grid-template-columns: 116px minmax(0, 1fr);
+  gap: 16px;
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
+}
+.direction > div:last-child { border-bottom: 1px solid var(--line); }
+.direction dt { font-size: .74rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; padding-top: 3px; }
+.direction dd { color: var(--text-2); font-size: .95rem; line-height: 1.6; }
+
+.modal-method { margin-top: clamp(32px, 5vw, 56px); padding-top: 32px; border-top: 1px solid var(--line); }
+.wf { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.wf li { position: relative; padding: 18px 44px 0 0; border-top: 2px solid var(--red); }
+.wf-stage { display: block; font-size: 1.05rem; font-weight: 800; letter-spacing: -.01em; }
+.wf p { margin-top: 8px; font-size: .92rem; color: var(--text-2); line-height: 1.6; }
+.wf-arrow { position: absolute; top: 14px; right: 8px; font-size: 1.3rem; color: var(--red); }
+.wf li:last-child .wf-arrow { display: none; }
+
+.modal-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: clamp(32px, 5vw, 56px);
+}
+
+@media (max-width: 800px) {
+  .modal { padding: 0; }
+  .modal-panel { border: 0; }
+  .modal-cols { grid-template-columns: 1fr; }
+  .direction > div { grid-template-columns: 1fr; gap: 4px; }
+  .wf { grid-template-columns: 1fr; gap: 20px; }
+  .wf li { padding-right: 0; }
+  .wf-arrow { position: static; display: inline-block; margin-top: 10px; transform: rotate(90deg); }
+  .modal-nav .btn { flex: 1; padding: 0 12px; font-size: .7rem; letter-spacing: .08em; }
+  .modal-close span { display: none; }
+  .modal-close { padding: 0; width: 44px; justify-content: center; }
+}
+
+/* ==========================================================================
+   6. FEATURED — BODYCAM & TRUE CRIME THUMBNAILS
+   ========================================================================== */
+.featured { position: relative; }
+.featured::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: max(var(--pad), calc((100% - var(--max)) / 2 + var(--pad)));
+  width: min(160px, 30vw);
+  height: 3px;
+  background: var(--red);
+}
+.label-row { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 24px; }
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 14px;
+  border: 1px solid var(--red);
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  color: var(--text);
+}
+.chip::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--red); }
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(28px, 3vw, 40px);
+}
+.feature-card { display: flex; flex-direction: column; cursor: pointer; }
+
+.feature-media {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--card);
+  box-shadow: 0 0 0 1px var(--line);
+  transition: box-shadow .35s var(--ease);
+}
+.feature-media img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 1s var(--ease);
+}
+.feature-card:hover .feature-media {
+  box-shadow: 0 0 0 2px var(--red), 0 24px 48px -16px rgba(0, 0, 0, .6);
+}
+.feature-card:hover .feature-media img { transform: scale(1.045); }
+
+.feature-badge {
+  position: absolute;
+  top: 0; left: 0;
+  z-index: 2;
+  padding: 8px 14px;
+  background: var(--red);
+  color: #080808;
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: .14em;
+}
+
+.feature-info { padding-top: 22px; }
+.feature-cat {
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  color: var(--red);
+}
+.feature-title {
+  margin-top: 10px;
+  font-size: clamp(1.1rem, 1.5vw, 1.3rem);
+  font-weight: 700;
+  line-height: 1.28;
+  letter-spacing: -.015em;
+  text-wrap: balance;
+}
+.feature-info .btn { margin-top: 22px; width: 100%; }
+
+@media (max-width: 1000px) {
+  .feature-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .feature-grid { grid-template-columns: 1fr; }
+}
+
+.grow-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(28px, 3vw, 40px);
+}
+@media (max-width: 700px) {
+  .grow-grid { grid-template-columns: 1fr; }
+}
+
+/* ==========================================================================
+   6. SECTION 01 — SELECTED WORK
+   ========================================================================== */
+.projects { display: grid; gap: clamp(72px, 10vw, 150px); }
+
+.project {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: clamp(20px, 3vw, 48px);
+  align-items: end;
+  cursor: pointer;
+}
+.project-media {
+  position: relative;
+  grid-column: 1 / span 8;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--card);
+}
+.project-media img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s var(--ease);
+}
+.project-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 0 0 0 var(--red);
+  transition: box-shadow .35s var(--ease);
+  pointer-events: none;
+}
+.project:hover .project-media img { transform: scale(1.04); }
+.project:hover .project-media::after { box-shadow: inset 0 0 0 3px var(--red); }
+
+.project-info { grid-column: 9 / -1; }
+.project:nth-child(even) .project-media { grid-column: 5 / -1; grid-row: 1; }
+.project:nth-child(even) .project-info { grid-column: 1 / span 4; grid-row: 1; }
+
+.project-num {
+  font-size: clamp(3.5rem, 6.4vw, 6.5rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -.04em;
+  color: transparent;
+  -webkit-text-stroke: 1px #555;
+  transition: -webkit-text-stroke-color .4s;
+}
+.project:hover .project-num { -webkit-text-stroke-color: var(--red); }
+
+.project-cat {
+  margin-top: 22px;
+  font-size: .74rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  color: var(--red);
+}
+.project-title {
+  margin: 14px 0 30px;
+  font-size: clamp(1.3rem, 1.9vw, 1.8rem);
+  font-weight: 700;
+  line-height: 1.22;
+  letter-spacing: -.02em;
+  text-wrap: balance;
+}
+
+@media (max-width: 900px) {
+  .project { align-items: start; }
+  .project-media,
+  .project:nth-child(even) .project-media { grid-column: 1 / -1; grid-row: 1; }
+  .project-info,
+  .project:nth-child(even) .project-info { grid-column: 1 / -1; grid-row: 2; margin-top: 24px; }
+  .project-num { font-size: 3rem; }
+  .project-cat { margin-top: 12px; }
+  .project-title { margin: 10px 0 24px; }
+  .project-info .btn { width: 100%; }
+}
+
+/* ==========================================================================
+   7b. SECTION 02 — NEW THUMBNAILS / CHANNEL TESTS
+   ========================================================================== */
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .7em;
+  margin-top: 30px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--red);
+  font-size: .74rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  transition: color .2s;
+}
+.text-link:hover { color: var(--red); }
+.text-link .arr { display: inline-block; transition: transform .3s var(--ease); }
+.text-link:hover .arr { transform: translateY(4px); }
+
+.new-work { position: relative; }
+.new-work::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: max(var(--pad), calc((100% - var(--max)) / 2 + var(--pad)));
+  width: min(160px, 30vw);
+  height: 3px;
+  background: var(--red);
+}
+.label-row { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 24px; }
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 14px;
+  border: 1px solid var(--red);
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  color: var(--text);
+}
+.chip::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--red); }
+
+.tests {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(56px, 7vw, 96px) clamp(20px, 3vw, 48px);
+}
+.test { display: flex; flex-direction: column; cursor: pointer; }
+.test:first-child { grid-column: 1 / -1; }
+
+.test-media {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--card);
+}
+.test-media img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s var(--ease);
+}
+.test-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 0 0 0 var(--red);
+  transition: box-shadow .35s var(--ease);
+  pointer-events: none;
+}
+.test:hover .test-media img { transform: scale(1.04); }
+.test:hover .test-media::after { box-shadow: inset 0 0 0 3px var(--red); }
+
+.test-badge {
+  position: absolute;
+  top: 0; left: 0;
+  z-index: 2;
+  padding: 9px 16px;
+  background: var(--red);
+  color: #080808;
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .16em;
+}
+
+.test-info {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 22px;
+  align-items: end;
+  padding-top: 26px;
+}
+.test:first-child .test-info { grid-template-columns: minmax(0, 1fr) auto; gap: 24px 48px; }
+.test-cat { font-size: .74rem; font-weight: 700; letter-spacing: .18em; color: var(--red); }
+.test-title {
+  margin-top: 12px;
+  font-size: clamp(1.3rem, 1.9vw, 1.75rem);
+  font-weight: 700;
+  line-height: 1.22;
+  letter-spacing: -.02em;
+  text-wrap: balance;
+  transition: transform .4s var(--ease);
+}
+.test:first-child .test-title { font-size: clamp(1.5rem, 2.8vw, 2.6rem); font-weight: 800; letter-spacing: -.03em; max-width: 24ch; }
+.test:hover .test-title { transform: translateX(6px); }
+.test-info .btn { justify-self: start; }
+.test:first-child .test-info .btn { justify-self: end; }
+
+@media (max-width: 900px) {
+  .tests { grid-template-columns: 1fr; }
+  .test:first-child .test-info { grid-template-columns: 1fr; }
+  .test:first-child .test-info .btn { justify-self: start; }
+  .test-info .btn { width: 100%; }
+  .test:first-child .test-info .btn { width: 100%; }
+}
+
+/* ==========================================================================
+   8. SECTION 03 — CHATG METHOD
+   ========================================================================== */
+.flow {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  margin-bottom: clamp(48px, 6vw, 80px);
+}
+.flow-node {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 28px 10px 14px 0;
+  border-top: 2px solid var(--line);
+  transition: border-color .5s;
+}
+.flow-node::before {
+  content: "";
+  position: absolute;
+  top: -7px; left: 0;
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--line);
+  transition: background-color .5s, border-color .5s, box-shadow .4s;
+}
+.flow-label {
+  display: block;
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  line-height: 1.4;
+  color: var(--text-2);
+  transition: color .3s;
+}
+.flow-node[data-kind="tool"] .flow-label { color: var(--text); font-weight: 800; }
+.flow-node:hover .flow-label { color: var(--text); }
+.flow-node.passed { border-top-color: var(--red); }
+.flow-node.passed::before { background: var(--red); border-color: var(--red); }
+.flow-node.current::before { box-shadow: 0 0 0 5px rgba(255, 59, 48, .28); }
+.flow-node.current .flow-label { color: var(--text); }
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+.step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--card);
+  padding: clamp(24px, 2.6vw, 40px);
+  cursor: pointer;
+  transition: background-color .35s;
+}
+.step::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--red);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .5s var(--ease);
+}
+.step:hover { background: #1b1b1b; }
+.step.active { background: #1c1c1c; }
+.step.active::before { transform: scaleX(1); }
+
+.step-btn { display: block; width: 100%; }
+.step-num {
+  display: block;
+  font-size: clamp(2.3rem, 3.4vw, 3.3rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -.04em;
+  color: transparent;
+  -webkit-text-stroke: 1px #5c5c5c;
+  transition: color .4s, -webkit-text-stroke-color .4s, transform .4s var(--ease);
+}
+.step:hover .step-num { -webkit-text-stroke-color: var(--red); transform: translateX(4px); }
+.step.active .step-num { color: var(--red); -webkit-text-stroke-color: var(--red); }
+.step-tag {
+  display: block;
+  margin-top: 26px;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  color: var(--red);
+}
+.step-title {
+  display: block;
+  margin-top: 8px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -.01em;
+}
+.step-desc { margin-top: 14px; color: var(--text-2); font-size: .96rem; }
+.step-list { display: grid; gap: 4px; margin-top: 10px; }
+.step-list li { position: relative; padding-left: 20px; color: var(--text-2); font-size: .96rem; }
+.step-list li::before { content: ""; position: absolute; left: 0; top: .78em; width: 9px; height: 2px; background: var(--red); }
+
+@media (max-width: 1000px) {
+  .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 760px) {
+  .flow { grid-template-columns: 1fr; }
+  .flow-node {
+    padding: 10px 0 10px 30px;
+    min-height: 48px;
+    border-top: 0;
+    border-left: 2px solid var(--line);
+    display: flex;
+    align-items: center;
+  }
+  .flow-node::before { top: 50%; left: -7px; margin-top: -6px; }
+  .flow-node.passed { border-left-color: var(--red); }
+  .flow-label { font-size: .78rem; }
+  .steps { grid-template-columns: 1fr; }
+}
+
+/* ==========================================================================
+   9. SECTION 03 — ABOUT (+ capabilities, tools)
+   ========================================================================== */
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: clamp(32px, 6vw, 96px);
+  align-items: start;
+}
+.about-text {
+  font-size: clamp(1.1rem, 1.6vw, 1.45rem);
+  font-weight: 500;
+  line-height: 1.55;
+  letter-spacing: -.01em;
+  max-width: 62ch;
+}
+
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: clamp(48px, 6vw, 80px);
+}
+.info-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  padding: 28px 26px 30px;
+  transition: border-color .3s, transform .4s var(--ease);
+}
+.info-card:hover { border-color: #444; transform: translateY(-4px); }
+.info-card dt { font-size: .72rem; font-weight: 700; letter-spacing: .18em; color: var(--red); }
+.info-card dd { margin-top: 12px; font-size: 1.12rem; font-weight: 700; line-height: 1.3; letter-spacing: -.01em; }
+
+.subsection { margin-top: clamp(80px, 10vw, 140px); }
+
+.caps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(28px, 3vw, 44px) clamp(20px, 3vw, 44px);
+  margin-top: clamp(32px, 4vw, 56px);
+}
+.cap { position: relative; padding-top: 24px; border-top: 1px solid var(--line); }
+.cap::before {
+  content: "";
+  position: absolute;
+  top: -1px; left: 0; right: 0;
+  height: 2px;
+  background: var(--red);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .5s var(--ease);
+}
+.cap:hover::before { transform: scaleX(1); }
+.cap h4 { font-size: clamp(1.25rem, 1.8vw, 1.6rem); font-weight: 800; letter-spacing: -.025em; line-height: 1.15; }
+.cap p { margin-top: 10px; color: var(--text-2); font-size: .95rem; max-width: 34ch; }
+
+.tools {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: stretch;
+  gap: clamp(12px, 2vw, 28px);
+  margin-top: clamp(32px, 4vw, 56px);
+}
+.tool {
+  background: var(--card);
+  border: 1px solid var(--line);
+  padding: clamp(28px, 4vw, 56px);
+  transition: border-color .3s;
+}
+.tool:hover { border-color: var(--red); }
+.tool-role { font-size: .74rem; font-weight: 700; letter-spacing: .18em; color: var(--red); }
+.tool h4 {
+  margin: 20px 0 22px;
+  font-size: clamp(2.4rem, 5vw, 4.4rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -.045em;
+}
+.tool p:last-child { color: var(--text-2); max-width: 44ch; }
+.tools-x { align-self: center; font-size: 1.6rem; font-weight: 300; color: var(--muted); }
+
+@media (max-width: 1000px) {
+  .info-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .caps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 820px) {
+  .about-grid { grid-template-columns: 1fr; }
+  .tools { grid-template-columns: 1fr; }
+  .tools-x { justify-self: center; line-height: 1; }
+}
+@media (max-width: 560px) {
+  .info-cards { grid-template-columns: 1fr; }
+  .caps { grid-template-columns: 1fr; }
+}
+
+/* ==========================================================================
+   10. SECTION 04 — PROCESS TIMELINE
+   ========================================================================== */
+.timeline {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0 clamp(14px, 2vw, 32px);
+  padding-top: 44px;
+}
+.timeline::before,
+.timeline::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+}
+.timeline::before { background: var(--line); }
+.timeline::after {
+  background: var(--red);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 1.9s var(--ease) .3s;
+}
+.timeline.in::after { transform: scaleX(1); }
+
+.tl-item { position: relative; --t: calc(var(--i) * .3s + .3s); }
+.tl-item::before {
+  content: "";
+  position: absolute;
+  top: -49px; left: 0;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--line);
+  transition: background-color .3s var(--t), border-color .3s var(--t);
+}
+.timeline.in .tl-item::before { background: var(--red); border-color: var(--red); }
+
+.tl-num {
+  display: block;
+  font-size: clamp(2.6rem, 4.6vw, 4.6rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -.04em;
+  color: transparent;
+  -webkit-text-stroke: 1px #5c5c5c;
+  transition: -webkit-text-stroke-color .4s var(--t), color .4s var(--t);
+}
+.timeline.in .tl-num { -webkit-text-stroke-color: var(--red); }
+.timeline.in .tl-item:last-child .tl-num { color: var(--red); }
+
+.tl-title { margin-top: 22px; font-size: 1.05rem; font-weight: 800; letter-spacing: .06em; }
+.tl-item p { margin-top: 8px; color: var(--text-2); font-size: .95rem; max-width: 22ch; }
+
+@media (max-width: 899px) {
+  .timeline {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-top: 0;
+    padding-left: 40px;
+  }
+  .timeline::before, .timeline::after {
+    top: 0; bottom: 0; left: 0; right: auto;
+    width: 2px; height: auto;
+  }
+  .timeline::after { transform: scaleY(0); transform-origin: top; }
+  .timeline.in::after { transform: scaleY(1); }
+  .tl-item::before { top: 14px; left: -45px; }
+  .tl-num { font-size: 2.6rem; }
+  .tl-title { margin-top: 12px; }
+  .tl-item p { max-width: 40ch; }
+}
+
+/* ==========================================================================
+   11. CONTACT CTA
+   ========================================================================== */
+.cta {
+  position: relative;
+  overflow: hidden;
+  padding-block: clamp(96px, 14vw, 200px);
+  border-top: 1px solid var(--line);
+  isolation: isolate;
+}
+.cta-bg { position: absolute; inset: 0; z-index: -1; background: var(--card); }
+.cta-bg img { width: 100%; height: 100%; object-fit: cover; opacity: .3; filter: blur(10px); transform: scale(1.06); }
+.cta-bg::after { content: ""; position: absolute; inset: 0; background: rgba(8, 8, 8, .72); }
+
+.cta-title {
+  max-width: 15ch;
+  font-size: clamp(2.5rem, 7.4vw, 7.2rem);
+  font-weight: 800;
+  line-height: .94;
+  letter-spacing: -.045em;
+  text-wrap: balance;
+}
+.cta-sub {
+  margin-top: 32px;
+  font-size: clamp(.9rem, 1.4vw, 1.15rem);
+  font-weight: 600;
+  letter-spacing: .12em;
+  color: var(--text-2);
+}
+.cta .btn-row { margin-top: 44px; }
+
+.contact-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 64px;
+  margin-top: clamp(56px, 7vw, 96px);
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+.contact-details dt { font-size: .7rem; font-weight: 700; letter-spacing: .2em; color: var(--text-2); }
+.contact-details dd { margin-top: 6px; font-size: 1.05rem; font-weight: 600; }
+.contact-details a { border-bottom: 1px solid var(--red); transition: color .2s; }
+.contact-details a:hover { color: var(--red); }
+
+@media (max-width: 560px) {
+  .cta .btn-row .btn { width: 100%; }
+}
+
+/* ==========================================================================
+   12. FOOTER
+   ========================================================================== */
+.site-footer { border-top: 1px solid var(--line); padding-block: 48px 40px; }
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 32px 48px;
+  align-items: start;
+}
+.footer-name { font-size: .95rem; font-weight: 800; letter-spacing: .06em; }
+.footer-sub { margin-top: 2px; font-size: .78rem; color: var(--text-2); }
+.footer-nav { display: flex; flex-wrap: wrap; gap: 8px 32px; }
+.footer-nav a { padding: 8px 0; font-size: .84rem; color: var(--text-2); transition: color .2s; }
+.footer-nav a:hover { color: var(--text); }
+.copyright {
+  grid-column: 1 / -1;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+  font-size: .74rem;
+  letter-spacing: .1em;
+  color: var(--text-2);
+}
+@media (max-width: 700px) {
+  .footer-grid { grid-template-columns: 1fr; }
+}
+
+/* ==========================================================================
+   13. REDUCED MOTION
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    transition-delay: 0s !important;
+    scroll-behavior: auto !important;
+  }
+  .js .reveal { opacity: 1; transform: none; }
+  .scroll-cue .line::after { animation: none; }
+}
+</style>
+</head>
+
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div id="page">
+
+<!-- ====================================================================
+     HEADER
+     ==================================================================== -->
+<header class="site-header" id="siteHeader">
+  <div class="container nav">
+    <a class="brand" href="#top" aria-label="Aljay Josh A. Passilan — back to top">
+      <span class="brand-name">ALJAY JOSH A. PASSILAN</span>
+      <span class="brand-sub">YouTube Thumbnail Designer</span>
+    </a>
+
+    <nav aria-label="Primary">
+      <ul class="nav-links">
+        <li><a href="#work" data-navlink="work">Work</a></li>
+        <li><a href="#method" data-navlink="method">ChatG Method</a></li>
+        <li><a href="#about" data-navlink="about">About</a></li>
+        <li><a href="#contact" data-navlink="contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <a class="btn btn-primary nav-cta" href="#contact">LET'S WORK</a>
+
+    <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <nav aria-label="Mobile">
+      <ul>
+        <li style="--i:0"><a href="#work" data-navlink="work">Work</a></li>
+        <li style="--i:1"><a href="#method" data-navlink="method">ChatG Method</a></li>
+        <li style="--i:2"><a href="#about" data-navlink="about">About</a></li>
+        <li style="--i:3"><a href="#contact" data-navlink="contact">Contact</a></li>
+        <li style="--i:4" class="menu-cta"><a class="btn btn-primary" href="#contact">LET'S WORK</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ====================================================================
+     HERO
+     ==================================================================== -->
+<section class="hero" id="top" data-nav="" aria-labelledby="heroTitle">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="label">YOUTUBE THUMBNAIL DESIGNER</p>
+      <h1 class="hero-title" id="heroTitle">I TURN YOUTUBE TITLES INTO VISUAL STORIES.</h1>
+      <p class="hero-lead">AI-assisted thumbnail concepts built with my ChatG Method — combining ChatGPT for creative direction and Gemini for visual generation.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="#work">VIEW MY WORK <span class="arr" aria-hidden="true">→</span></a>
+        <a class="btn btn-ghost" href="#method">EXPLORE MY METHOD</a>
+      </div>
+    </div>
+
+    <figure class="hero-visual">
+      <div class="viewfinder">
+        <i></i><i></i><i></i><i></i>
+        <div class="frame">
+          <img src="bodycam-01.png" width="1671" height="941" fetchpriority="high"
+               alt="Spec bodycam-style thumbnail: a man in a muddy t-shirt gestures with open hands in his doorway while a woman behind him covers her mouth, with a police SUV parked outside.">
+        </div>
+      </div>
+      <figcaption class="hero-meta">
+        <span>CHATGPT × GEMINI</span>
+        <span>AI-ASSISTED WORKFLOW</span>
+        <span>BODYCAM / TRUE CRIME</span>
+      </figcaption>
+    </figure>
+  </div>
+
+  <a class="scroll-cue" href="#work" aria-label="Scroll to selected work">
+    <span>SCROLL</span>
+    <span class="line" aria-hidden="true"></span>
+  </a>
+</section>
+
+<!-- ====================================================================
+     FEATURED THUMBNAILS — newest portfolio work (AI / tech / finance)
+     ==================================================================== -->
+<section class="section section--alt featured" id="work" data-nav="work" aria-labelledby="growthTitle">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="label-row">
+        <p class="label">01 — FEATURED THUMBNAILS</p>
+        <p class="chip">NEWEST WORK</p>
+      </div>
+      <h2 class="h2" id="growthTitle">LATEST THUMBNAIL WORK.</h2>
+      <p class="section-desc">Recent thumbnail designs for AI, tech, and finance content — the newest additions to the portfolio.</p>
+      <a class="text-link" href="#bodycam-work">SEE BODYCAM &amp; TRUE CRIME WORK <span class="arr" aria-hidden="true">↓</span></a>
+    </div>
+
+    <!-- Cards are rendered from the PROJECTS array (type "growth") in the script below -->
+    <div class="grow-grid" id="projectsGrowth">
+      <noscript><p class="section-desc">Please enable JavaScript to view the project cards.</p></noscript>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================================
+     FEATURED — BODYCAM & TRUE CRIME THUMBNAILS
+     ==================================================================== -->
+<section class="section featured" id="bodycam-work" data-nav="work" aria-labelledby="workTitle">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="label-row">
+        <p class="label">02 — BODYCAM &amp; TRUE CRIME</p>
+        <p class="chip">SPEC SAMPLES</p>
+      </div>
+      <h2 class="h2" id="workTitle">FEATURED BODYCAM &amp; TRUE CRIME THUMBNAILS.</h2>
+      <p class="section-desc">High-CTR thumbnail concepts inspired by realistic police bodycam and true-crime storytelling.</p>
+      <a class="text-link" href="#portfolio">SEE MORE THUMBNAIL WORK <span class="arr" aria-hidden="true">↓</span></a>
+    </div>
+
+    <!-- Cards are rendered from the PROJECTS array in the script below -->
+    <div class="feature-grid" id="projectsFeatured">
+      <noscript><p class="section-desc">Please enable JavaScript to view the project cards.</p></noscript>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================================
+     01 — IMPROVED THUMBNAILS
+     ==================================================================== -->
+<section class="section" id="portfolio" data-nav="work" aria-labelledby="portfolioTitle">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="label">03 — IMPROVED THUMBNAILS</p>
+      <h2 class="h2" id="portfolioTitle">IMPROVING THE VISUAL STORY.</h2>
+      <p class="section-desc">A selection of thumbnail improvement projects focused on stronger visual hierarchy, clearer storytelling, and more immediate viewer curiosity.</p>
+      <a class="text-link" href="#new-work">SEE THE NEW THUMBNAILS <span class="arr" aria-hidden="true">↓</span></a>
+    </div>
+
+    <!-- Cards are rendered from the PROJECTS array (type "improved") in the script below -->
+    <div class="projects" id="projectsImproved">
+      <noscript><p class="section-desc">Please enable JavaScript to view the project cards.</p></noscript>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================================
+     02 — NEW THUMBNAILS / CHANNEL TESTS
+     ==================================================================== -->
+<section class="section section--alt new-work" id="new-work" data-nav="work" aria-labelledby="newTitle">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="label-row">
+        <p class="label">04 — NEW THUMBNAILS</p>
+        <p class="chip">CHANNEL TESTS</p>
+      </div>
+      <h2 class="h2" id="newTitle">NEW VISUAL DIRECTIONS.</h2>
+      <p class="section-desc">Three original thumbnail concepts created as channel test pieces, built from the provided titles and developed to explore different visual hooks, subjects, and storytelling approaches.</p>
+    </div>
+
+    <!-- Cards are rendered from the PROJECTS array (type "new") in the script below -->
+    <div class="tests" id="projectsNew"></div>
+  </div>
+</section>
+
+<!-- ====================================================================
+     02 — CHATG METHOD
+     ==================================================================== -->
+<section class="section" id="method" data-nav="method" aria-labelledby="methodTitle">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="label">05 — CHATG METHOD</p>
+      <h2 class="h2" id="methodTitle">MY AI-ASSISTED THUMBNAIL WORKFLOW.</h2>
+      <p class="section-desc">I use ChatGPT to turn a video title into a strong visual concept and generation prompt, then use Gemini to explore and develop the visual direction.</p>
+    </div>
+
+    <!-- Main flow: select any point to jump to its step below -->
+    <ol class="flow reveal" id="flow" aria-label="ChatG Method flow, from YouTube title to final thumbnail">
+      <li><button type="button" class="flow-node" data-step="1" data-end="1"><span class="flow-label">YOUTUBE TITLE</span></button></li>
+      <li><button type="button" class="flow-node" data-step="1" data-end="1"><span class="flow-label">TITLE ANALYSIS</span></button></li>
+      <li><button type="button" class="flow-node" data-step="2" data-end="2" data-kind="tool"><span class="flow-label">CHATGPT</span></button></li>
+      <li><button type="button" class="flow-node" data-step="2" data-end="2"><span class="flow-label">VISUAL CONCEPT</span></button></li>
+      <li><button type="button" class="flow-node" data-step="3" data-end="3"><span class="flow-label">PROMPT</span></button></li>
+      <li><button type="button" class="flow-node" data-step="4" data-end="4" data-kind="tool"><span class="flow-label">GEMINI</span></button></li>
+      <li><button type="button" class="flow-node" data-step="4" data-end="5"><span class="flow-label">VISUAL EXPLORATION</span></button></li>
+      <li><button type="button" class="flow-node" data-step="6" data-end="6"><span class="flow-label">FINAL THUMBNAIL</span></button></li>
+    </ol>
+
+    <ol class="steps reveal" id="steps">
+      <li class="step" data-step="1">
+        <button type="button" class="step-btn" aria-pressed="false">
+          <span class="step-num">01</span>
+          <span class="step-tag">YOUTUBE TITLE</span>
+          <span class="step-title">UNDERSTAND THE TITLE</span>
+        </button>
+        <p class="step-desc">Identify the subject, story, emotion, conflict, curiosity, and strongest visual opportunity within the title.</p>
+      </li>
+      <li class="step" data-step="2">
+        <button type="button" class="step-btn" aria-pressed="false">
+          <span class="step-num">02</span>
+          <span class="step-tag">CHATGPT</span>
+          <span class="step-title">CREATIVE DIRECTION</span>
+        </button>
+        <p class="step-desc">Use ChatGPT for:</p>
+        <ul class="step-list">
+          <li>Title analysis</li>
+          <li>Creative concepts</li>
+          <li>Visual hooks</li>
+          <li>Composition ideas</li>
+          <li>Creative direction</li>
+          <li>Prompt development</li>
+        </ul>
+      </li>
+      <li class="step" data-step="3">
+        <button type="button" class="step-btn" aria-pressed="false">
+          <span class="step-num">03</span>
+          <span class="step-tag">PROMPT</span>
+          <span class="step-title">BUILD THE VISUAL PROMPT</span>
+        </button>
+        <p class="step-desc">Turn the concept into a detailed visual-generation prompt.</p>
+      </li>
+      <li class="step" data-step="4">
+        <button type="button" class="step-btn" aria-pressed="false">
+          <span class="step-num">04</span>
+          <span class="step-tag">GEMINI</span>
+          <span class="step-title">VISUAL GENERATION</span>
+        </button>
+        <p class="step-desc">Use Gemini for:</p>
+        <ul class="step-list">
+          <li>Visual generation</li>
+          <li>Exploration</li>
+          <li>Variations</li>
+          <li>Visual development</li>
+        </ul>
+      </li>
+      <li class="step" data-step="5">
+        <button type="button" class="step-btn" aria-pressed="false">
+          <span class="step-num">05</span>
+          <span class="step-tag">SELECT</span>
+          <span class="step-title">CHOOSE THE DIRECTION</span>
+        </button>
+        <p class="step-desc">Review the generated possibilities and identify the strongest visual direction.</p>
+      </li>
+      <li class="step" data-step="6">
+        <button type="button" class="step-btn" aria-pressed="false">
+          <span class="step-num">06</span>
+          <span class="step-tag">FINAL</span>
+          <span class="step-title">FINAL THUMBNAIL</span>
+        </button>
+        <p class="step-desc">Develop the selected direction into the final thumbnail concept.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ====================================================================
+     03 — ABOUT  (with capabilities + tools)
+     ==================================================================== -->
+<section class="section section--alt" id="about" data-nav="about" aria-labelledby="aboutTitle">
+  <div class="container">
+
+    <div class="about-grid">
+      <div class="reveal">
+        <p class="label">06 — ABOUT</p>
+        <h2 class="h2" id="aboutTitle">DESIGN STARTS WITH THE STORY.</h2>
+      </div>
+      <p class="about-text reveal" style="--d:.12s">I approach thumbnail design by first understanding the story behind a video, then finding a visual concept that communicates the subject quickly and creates curiosity. My ChatG Method combines ChatGPT for creative direction and prompt development with Gemini for visual generation and exploration.</p>
+    </div>
+
+    <dl class="info-cards">
+      <div class="info-card reveal"><dt>ROLE</dt><dd>YouTube Thumbnail Designer</dd></div>
+      <div class="info-card reveal" style="--d:.08s"><dt>WORKFLOW</dt><dd>ChatGPT × Gemini</dd></div>
+      <div class="info-card reveal" style="--d:.16s"><dt>METHOD</dt><dd>ChatG Method</dd></div>
+      <div class="info-card reveal" style="--d:.24s"><dt>SPECIALTY</dt><dd>Bodycam &amp; True-Crime Thumbnails</dd></div>
+    </dl>
+
+    <!-- Capabilities -->
+    <div class="subsection" aria-labelledby="capsTitle">
+      <h3 class="sub-title reveal" id="capsTitle">WHAT I FOCUS ON</h3>
+      <div class="caps">
+        <article class="cap reveal">
+          <h4>Bodycam &amp; True Crime Thumbnails</h4>
+          <p>Realistic bodycam-style composition built for tension and curiosity.</p>
+        </article>
+        <article class="cap reveal" style="--d:.06s">
+          <h4>High-CTR Composition</h4>
+          <p>Clear focal points and hierarchy designed to earn the click.</p>
+        </article>
+        <article class="cap reveal" style="--d:.12s">
+          <h4>Visual Storytelling</h4>
+          <p>Communicating a subject, its story, and its expression in a single frame.</p>
+        </article>
+        <article class="cap reveal" style="--d:.04s">
+          <h4>Title-to-Visual Translation</h4>
+          <p>Turning a video title into an image that shows its hook.</p>
+        </article>
+        <article class="cap reveal" style="--d:.1s">
+          <h4>Image &amp; Frame Enhancement</h4>
+          <p>Sharpening and enhancing low-resolution source frames for cleaner thumbnails.</p>
+        </article>
+        <article class="cap reveal" style="--d:.16s">
+          <h4>Facial Expression Emphasis</h4>
+          <p>Framing and emphasis that keep a reaction the focal point.</p>
+        </article>
+        <article class="cap reveal" style="--d:.06s">
+          <h4>Channel Style Adaptation</h4>
+          <p>Shaping concepts to fit the look of a channel, automation channels included.</p>
+        </article>
+        <article class="cap reveal" style="--d:.12s">
+          <h4>YouTube Automation Support</h4>
+          <p>Thumbnail production that fits an automation-channel workflow.</p>
+        </article>
+        <article class="cap reveal" style="--d:.18s">
+          <h4>AI-Assisted Creative Workflow</h4>
+          <p>ChatGPT for direction, Gemini for generation.</p>
+        </article>
+      </div>
+    </div>
+
+    <!-- Tools -->
+    <div class="subsection" aria-labelledby="toolsTitle">
+      <h3 class="sub-title reveal" id="toolsTitle">MY AI WORKFLOW</h3>
+      <div class="tools">
+        <article class="tool reveal">
+          <p class="tool-role">CREATIVE DIRECTION</p>
+          <h4>ChatGPT</h4>
+          <p>Title analysis, creative concepts, visual hooks, thumbnail strategy, and prompt development/refinement.</p>
+        </article>
+        <span class="tools-x reveal" aria-hidden="true">×</span>
+        <article class="tool reveal" style="--d:.12s">
+          <p class="tool-role">VISUAL GENERATION</p>
+          <h4>Gemini</h4>
+          <p>Visual generation, exploration, variations, and development of thumbnail directions.</p>
+        </article>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ====================================================================
+     04 — PROCESS
+     ==================================================================== -->
+<section class="section" id="process" data-nav="method" aria-labelledby="processTitle">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="label">07 — PROCESS</p>
+      <h2 class="h2" id="processTitle">FROM TITLE TO THUMBNAIL.</h2>
+    </div>
+
+    <ol class="timeline reveal" id="timeline">
+      <li class="tl-item" style="--i:0"><span class="tl-num">01</span><h3 class="tl-title">UNDERSTAND</h3><p>Break down the title.</p></li>
+      <li class="tl-item" style="--i:1"><span class="tl-num">02</span><h3 class="tl-title">CONCEPT</h3><p>Find the strongest visual story.</p></li>
+      <li class="tl-item" style="--i:2"><span class="tl-num">03</span><h3 class="tl-title">PROMPT</h3><p>Develop the generation prompt.</p></li>
+      <li class="tl-item" style="--i:3"><span class="tl-num">04</span><h3 class="tl-title">GENERATE</h3><p>Explore the visual direction using Gemini.</p></li>
+      <li class="tl-item" style="--i:4"><span class="tl-num">05</span><h3 class="tl-title">REFINE</h3><p>Choose and improve the strongest direction.</p></li>
+      <li class="tl-item" style="--i:5"><span class="tl-num">06</span><h3 class="tl-title">FINALIZE</h3><p>Create the final thumbnail concept.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ====================================================================
+     CONTACT CTA
+     ==================================================================== -->
+<section class="cta" id="contact" data-nav="contact" aria-labelledby="ctaTitle">
+  <div class="cta-bg" aria-hidden="true">
+    <img src="bodycam-02.png" alt="" loading="lazy">
+  </div>
+  <div class="container">
+    <h2 class="cta-title reveal" id="ctaTitle">HAVE A STORY THAT NEEDS A THUMBNAIL?</h2>
+    <p class="cta-sub reveal" style="--d:.1s">LET'S TURN THE IDEA INTO A VISUAL.</p>
+
+    <div class="btn-row reveal" style="--d:.2s">
+      <a class="btn btn-primary" href="mailto:aljayjosh@gmail.com?subject=Thumbnail%20project">LET'S WORK TOGETHER <span class="arr" aria-hidden="true">→</span></a>
+      <a class="btn btn-ghost" href="mailto:aljayjosh@gmail.com">EMAIL ME</a>
+    </div>
+
+    <dl class="contact-details reveal" style="--d:.3s">
+      <div>
+        <dt>EMAIL</dt>
+        <dd><a href="mailto:aljayjosh@gmail.com">aljayjosh@gmail.com</a></dd>
+      </div>
+      <div>
+        <dt>ONLINEJOBS.PH</dt>
+        <dd><a href="https://v2.onlinejobs.ph/jobseekers/info/5375385" target="_blank" rel="noopener noreferrer" aria-label="View my OnlineJobs.ph profile (opens in a new tab)">View my profile <span aria-hidden="true">↗</span></a></dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+</main>
+
+<!-- ====================================================================
+     FOOTER
+     ==================================================================== -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <p class="footer-name">ALJAY JOSH A. PASSILAN</p>
+      <p class="footer-sub">YouTube Thumbnail Designer</p>
+    </div>
+    <nav aria-label="Footer">
+      <ul class="footer-nav">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#method">ChatG Method</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <p class="copyright">© 2026 ALJAY JOSH A. PASSILAN</p>
+  </div>
+</footer>
+
+</div><!-- /#page -->
+
+<!-- ====================================================================
+     PROJECT MODAL
+     ==================================================================== -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-backdrop" aria-hidden="true"></div>
+  <div class="modal-panel" id="modalPanel">
+    <div class="modal-bar">
+      <p class="modal-meta"><span class="modal-num" id="modalNum"></span><span class="modal-cat" id="modalCat"></span></p>
+      <button type="button" class="modal-close" id="modalClose" aria-label="Close project details">
+        <span>CLOSE</span>
+        <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M1 1l12 12M13 1L1 13"/></svg>
+      </button>
+    </div>
+
+    <div class="modal-media"><img id="modalImg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" width="1024" height="572"></div>
+
+    <div class="modal-content">
+      <h2 class="modal-title" id="modalTitle"></h2>
+      <p class="modal-note" id="modalNote"></p>
+
+      <div class="modal-cols">
+        <section aria-labelledby="mConceptLabel">
+          <h3 class="m-label" id="mConceptLabel">CONCEPT</h3>
+          <p class="modal-concept" id="modalConcept"></p>
+        </section>
+        <section aria-labelledby="mDirectionLabel">
+          <h3 class="m-label" id="mDirectionLabel">VISUAL DIRECTION</h3>
+          <dl class="direction" id="modalDirection"></dl>
+        </section>
+      </div>
+
+      <section class="modal-method" aria-labelledby="mMethodLabel">
+        <h3 class="m-label" id="mMethodLabel">CHATG METHOD</h3>
+        <ol class="wf" id="modalWorkflow" aria-label="ChatGPT, then Gemini, then final thumbnail"></ol>
+      </section>
+
+      <div class="modal-nav">
+        <button type="button" class="btn btn-ghost" id="modalPrev"></button>
+        <button type="button" class="btn btn-ghost" id="modalNext"></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ==========================================================================
+   PROJECT DATA
+
+   type: "bodycam"  -> Featured section (main highlight), spec samples
+         "improved" -> Improved Thumbnails section
+         "new"      -> New Thumbnails / Channel Tests section
+
+   Descriptions are based only on each title and what is visible in its
+   image — no invented backstory, no performance claims. The three bodycam
+   projects are explicitly labeled as spec/portfolio samples, not real
+   client or channel work.
+   ========================================================================== */
+const PROJECTS = [
+
+  /* ---------------- FEATURED — BODYCAM / TRUE CRIME ---------------- */
+  {
+    number: "01",
+    type: "bodycam",
+    category: "BODYCAM / TRUE CRIME",
+    title: "Dad Has No Idea Why Police Are Really at His Door",
+    image: "bodycam-01.png",
+    alt: "Spec bodycam-style thumbnail: a man in a muddy t-shirt gestures with open hands in his doorway, a woman behind him covers her mouth in shock, and a police SUV is parked on the street outside. Bodycam overlay shows REC, AXON BODY 3, and a timestamp.",
+    concept: "The title sets up dramatic irony: the homeowner reacts with confusion while the viewer is told he doesn\u2019t know why police are really there. The bodycam framing puts the viewer in the officer\u2019s position, looking through the doorway at a man mid-explanation, with a police vehicle visible on the street behind him.",
+    visualDirection: [
+      { label: "Composition", text: "The subject stands just inside his doorway, framed by the door and porch light, with an officer\u2019s hand reaching into frame from the bottom right, pulling the viewer\u2019s point of view directly into the moment." },
+      { label: "Subject", text: "A man in work clothes gesturing with open palms, and a second figure behind him with her hand over her mouth, both reacting to something outside the frame." },
+      { label: "Focal point", text: "His confused, open-handed gesture and startled expression are the emotional center of the shot." },
+      { label: "Contrast", text: "The bright daylight scene and pale brick exterior make the darker doorway interior and the officer\u2019s hand at the frame\u2019s edge stand out." },
+      { label: "Color", text: "Natural daylight tones keep the scene grounded and realistic rather than stylized." },
+      { label: "Curiosity", text: "The title\u2019s claim that he \u201Chas no idea\u201D against his visibly confused reaction creates the open question the viewer wants answered." },
+      { label: "Readability", text: "The bodycam overlay \u2014 REC indicator, timestamp, device label \u2014 signals the genre instantly, even before any title text is added over the image." }
+    ],
+    workflow: [
+      { stage: "ChatGPT", note: "Analyzed the provided title to find its strongest hook \u2014 a homeowner\u2019s confusion set against implied police knowledge \u2014 and shaped a concept and generation prompt around a realistic bodycam doorway encounter." },
+      { stage: "Gemini", note: "Generated and explored the bodycam-style visual direction described in the prompt." },
+      { stage: "Final Thumbnail", note: "The strongest direction was developed into this spec thumbnail sample." }
+    ]
+  },
+  {
+    number: "02",
+    type: "bodycam",
+    category: "BODYCAM / TRUE CRIME",
+    title: "Routine Traffic Stop Takes a Turn When Officer Spots This",
+    image: "bodycam-02.png",
+    alt: "Spec bodycam-style thumbnail: at night, a young man inside a car raises his hands while a red circle and arrow highlight an object on the passenger seat. Police lights are visible outside, with a bodycam timestamp overlay.",
+    concept: "The title promises a routine stop that changes direction, so the thumbnail holds on the moment of that shift: hands going up, an officer\u2019s hand pointing, and a circled detail inside the car marking exactly what has changed the situation.",
+    visualDirection: [
+      { label: "Composition", text: "A red circle and arrow direct the eye straight to the object on the passenger seat, cutting through the low light of a night stop to show the viewer the pivotal detail immediately." },
+      { label: "Subject", text: "A young man inside a car, hands raised, face lit by exterior light, reacting to something the officer has just noticed." },
+      { label: "Focal point", text: "The circled object and the driver\u2019s raised hands work together as the two focal points, tying his reaction to the detail that caused it." },
+      { label: "Contrast", text: "Dark night surroundings and interior shadow make the red circle, the police lights, and the driver\u2019s lit face the brightest elements in the frame." },
+      { label: "Color", text: "Cool night-time blues and the red-and-blue wash of the police lights set a tense, procedural mood." },
+      { label: "Curiosity", text: "The title\u2019s \u201Ctakes a turn\u201D plus the highlighted object ask the same question: what did the officer spot, and what happens next?" },
+      { label: "Readability", text: "The bodycam timestamp and device overlay, plus the single circled detail, keep the frame readable even before any headline text is placed on top." }
+    ],
+    workflow: [
+      { stage: "ChatGPT", note: "Analyzed the provided title to find its strongest hook \u2014 a routine stop turning on one noticed detail \u2014 and shaped a concept and generation prompt around a realistic bodycam traffic stop." },
+      { stage: "Gemini", note: "Generated and explored the bodycam-style visual direction described in the prompt." },
+      { stage: "Final Thumbnail", note: "The strongest direction was developed into this spec thumbnail sample." }
+    ]
+  },
+  {
+    number: "03",
+    type: "bodycam",
+    category: "BODYCAM / TRUE CRIME",
+    title: "Smiling Man Has No Idea What Police Already Know",
+    image: "bodycam-03.png",
+    alt: "Spec bodycam-style thumbnail: a smiling man in a backwards cap gestures with open hands in an apartment parking lot, with several marked police vehicles and officers visible behind him in daylight. Bodycam overlay shows REC, AXON BODY 3, and a timestamp.",
+    concept: "The title is built on a contrast between the subject\u2019s mood and what it says police already know, so the thumbnail leans entirely on his expression: a wide, easy smile and relaxed open-handed gesture, with multiple police vehicles and officers visible behind him.",
+    visualDirection: [
+      { label: "Composition", text: "He is positioned in the left-of-center foreground, smiling directly at the camera, while the row of marked police vehicles and gathered officers fill the background, so both the mood and the situation read in a single glance." },
+      { label: "Subject", text: "A man in casual clothes with a backwards cap, smiling broadly with both hands open in a relaxed, almost joking gesture." },
+      { label: "Focal point", text: "His smile is the focal point the whole thumbnail is built around, deliberately at odds with the scene behind him." },
+      { label: "Contrast", text: "Bright daylight and his light-colored shirt keep him visually separated from the darker police vehicles and uniforms behind him." },
+      { label: "Color", text: "Natural, sunny daytime color keeps the surface tone light, which sharpens the contrast with the serious situation implied in the background." },
+      { label: "Curiosity", text: "The gap between his carefree expression and the title\u2019s \u201Chas no idea what police already know\u201D is the entire hook." },
+      { label: "Readability", text: "The bodycam overlay and the clearly visible police vehicles establish the genre and setting instantly." }
+    ],
+    workflow: [
+      { stage: "ChatGPT", note: "Analyzed the provided title to find its strongest hook \u2014 a relaxed reaction set against implied police knowledge \u2014 and shaped a concept and generation prompt around a realistic bodycam scene." },
+      { stage: "Gemini", note: "Generated and explored the bodycam-style visual direction described in the prompt." },
+      { stage: "Final Thumbnail", note: "The strongest direction was developed into this spec thumbnail sample." }
+    ]
+  },
+
+  /* ---------------- REST INSERTED HERE BY BUILD SCRIPT ---------------- */
+
+  /* ---------------- FEATURED THUMBNAILS — newest work ---------------- */
+  {
+    number: "01",
+    type: "growth",
+    category: "AI & TECH",
+    title: "Claude vs ChatGPT: I Used Both for 30 Days",
+    image: "growth-01.png",
+    alt: "YouTube thumbnail: a man gestures between two 3D app icons — an orange icon with a white asterisk-style mark and a green icon with an interlocking-ring mark — with a bold VS between them and the caption WHICH AI WINS? below.",
+    concept: "The title is a head-to-head comparison, so the thumbnail is built entirely around that format: two AI app icons facing off with a bold VS between them, and the presenter positioned between them like a referee. The caption WHICH AI WINS? states the format in plain language for anyone who doesn’t recognize the icons.",
+    visualDirection: [
+      { label: "Composition", text: "The two app icons anchor the left and right thirds of the frame, the presenter stands in the middle third, and the large VS sits directly behind him, tying all three elements into one symmetrical layout." },
+      { label: "Subject", text: "A man in a dark jacket over a white t-shirt, pointing with one hand toward each icon in turn, with an engaged, slightly skeptical expression." },
+      { label: "Focal point", text: "The VS is the visual anchor; the presenter’s pointing hands direct the eye out to each icon in turn." },
+      { label: "Contrast", text: "The warm orange icon and cool green icon sit against a dark, subtly gridded background, so both icons read clearly at a glance." },
+      { label: "Color", text: "A dark, neutral backdrop keeps the two brand colors — orange and green — as the only strong color notes in the frame." },
+      { label: "Curiosity", text: "WHICH AI WINS? poses a direct question that a head-to-head comparison format is built to answer." },
+      { label: "Readability", text: "Large bold VS and caption text stay legible at small sizes, and the two icons are simple enough to recognize even at thumbnail scale." }
+    ],
+    workflow: [
+      { stage: "ChatGPT", note: "Analyzed the comparison format implied by the title and shaped a concept and generation prompt built around a head-to-head VS layout." },
+      { stage: "Gemini", note: "Generated and explored the visual direction described in the prompt." },
+      { stage: "Final Thumbnail", note: "The strongest direction was developed into the final thumbnail." }
+    ]
+  },
+  {
+    number: "02",
+    type: "growth",
+    category: "FINANCE / BUSINESS",
+    title: "The Brutal Truth About Getting Rich in 2026",
+    image: "growth-02.png",
+    alt: "YouTube thumbnail: a man in a navy suit points toward the camera with both hands, beside bold text reading STOP BEING BROKE, with BEING highlighted in black on yellow, on a dark navy background.",
+    concept: "The title promises a blunt, no-nonsense take on getting rich, so the thumbnail leans on direct address: a presenter pointing straight at the camera beside a short, forceful command. STOP BEING BROKE translates the title’s “brutal truth” framing into three words aimed directly at the viewer.",
+    visualDirection: [
+      { label: "Composition", text: "The presenter occupies the left half in a confident, direct pointing pose, while the three-line headline fills the right half, splitting the frame cleanly between person and message." },
+      { label: "Subject", text: "A man in a navy suit and open-collar white shirt, pointing at the camera with both hands in a direct, confrontational gesture." },
+      { label: "Focal point", text: "His pointing hands and direct eye line pull the viewer's attention first, then hand off to the headline beside him." },
+      { label: "Contrast", text: "White and yellow-highlighted text stands out sharply against the dark navy background, and his lit face separates clearly from the shadowed backdrop." },
+      { label: "Color", text: "A restrained navy-and-white palette with a single yellow highlight keeps the design serious rather than flashy." },
+      { label: "Curiosity", text: "“Brutal truth” plus a direct command creates the sense of blunt, withheld advice the viewer wants to hear." },
+      { label: "Readability", text: "Three short stacked words in heavy type, with one line highlighted, read instantly even at small sizes." }
+    ],
+    workflow: [
+      { stage: "ChatGPT", note: "Analyzed the title’s blunt, direct tone and shaped a concept and generation prompt built around a direct-address command headline." },
+      { stage: "Gemini", note: "Generated and explored the visual direction described in the prompt." },
+      { stage: "Final Thumbnail", note: "The strongest direction was developed into the final thumbnail." }
+    ]
+  },
+  {
+    number: "03",
+    type: "growth",
+    category: "AI / ENTREPRENEURSHIP",
+    title: "7 AI Side Hustles That Can Make Money While You Sleep",
+    image: "growth-03.png",
+    alt: "YouTube thumbnail: a man in a suit gestures toward several floating 3D icons representing AI tools — a document, a laptop, a storefront, a video play button, an image, a shopping cart, and a gear — above the caption $15K/MONTH.",
+    concept: "The title lists multiple AI side hustles, so the thumbnail represents that range with a cluster of distinct icons — document, laptop, storefront, video, image, cart, gear — arranged around the presenter, while the large $15K/MONTH caption gives the whole cluster a single concrete number to anchor on.",
+    visualDirection: [
+      { label: "Composition", text: "Icons are arranged in a loose arc around the presenter, who stands centered gesturing out toward them, with the large caption anchoring the bottom of the frame." },
+      { label: "Subject", text: "A man in a suit, gesturing with an open hand and a pointing finger toward the surrounding icons, in a softly blurred office setting." },
+      { label: "Focal point", text: "The presenter’s gesture connects his expression to the ring of icons, while the bold dollar figure below is the second anchor point." },
+      { label: "Contrast", text: "The dark-toned 3D icons stand out against the softly lit, blurred office background, and the white caption text is the brightest element in the lower frame." },
+      { label: "Color", text: "A cool, muted office backdrop lets the varied icon colors and the bright white caption carry the visual interest." },
+      { label: "Curiosity", text: "Seven distinct icons hint at several different methods without revealing any one of them, and the dollar figure raises the stakes of finding out." },
+      { label: "Readability", text: "$15K/MONTH is large enough to read instantly, and the icon shapes are simple enough to register as a group even at small sizes." }
+    ],
+    workflow: [
+      { stage: "ChatGPT", note: "Analyzed the “7 AI side hustles” premise and shaped a concept and generation prompt built around a cluster of representative icons with a concrete income figure." },
+      { stage: "Gemini", note: "Generated and explored the visual direction described in the prompt." },
+      { stage: "Final Thumbnail", note: "The strongest direction was developed into the final thumbnail." }
+    ]
+  },
+  {
+    number: "04",
+    type: "growth",
+    category: "AI TUTORIAL",
+    title: "Learn 95% of Claude in Under 20 Minutes",
+    image: "growth-04.png",
+    alt: "YouTube thumbnail: the Claude logo and wordmark above a rounded UI toggle reading Chat and Artifacts with a cursor clicking Artifacts, beside a man in a navy suit gesturing toward the logo.",
+    concept: "The title promises a fast, near-complete walkthrough of one tool, so the thumbnail puts that tool’s own logo and a piece of its interface front and center, with the presenter gesturing toward it as a guide rather than the main subject.",
+    visualDirection: [
+      { label: "Composition", text: "The logo sits at the top left as the anchor, the UI toggle sits just below it as supporting detail, and the presenter on the right gestures back toward both, forming a clear left-to-right, top-to-bottom path." },
+      { label: "Subject", text: "The Claude logo and wordmark, a two-option interface toggle with a cursor mid-click, and a man in a navy suit gesturing toward them." },
+      { label: "Focal point", text: "The logo is the first thing read, with the cursor-on-toggle detail reinforcing that this is about using the product, not just discussing it." },
+      { label: "Contrast", text: "The warm orange logo mark stands out against a dark background with a soft warm glow, while the white UI toggle reads clearly beneath it." },
+      { label: "Color", text: "A dark backdrop with a warm amber glow keeps the orange logo as the dominant color note." },
+      { label: "Curiosity", text: "“95% in under 20 minutes” sets a specific, ambitious promise that the product-focused visual backs up." },
+      { label: "Readability", text: "The logo, wordmark, and toggle are all simple, high-contrast shapes that stay legible at small sizes." }
+    ],
+    workflow: [
+      { stage: "ChatGPT", note: "Analyzed the tutorial premise and shaped a concept and generation prompt built around the product’s own logo and interface as the visual subject." },
+      { stage: "Gemini", note: "Generated and explored the visual direction described in the prompt." },
+      { stage: "Final Thumbnail", note: "The strongest direction was developed into the final thumbnail." }
+    ]
+  },
+
+  /* ---------------- CATEGORY 01 — IMPROVED THUMBNAILS ---------------- */
+  {
+    number: "01",
+    type: "improved",
+    category: "IMPROVED THUMBNAIL / FOOD",
+    cardCategory: "FOOD / BUYING GUIDE",
+    title: "7 Beef Cuts I NEVER Buy — And 7 I Buy Every Single Time",
+    image: "improved-01.png",
+    alt: "Improved YouTube thumbnail: a bearded butcher holds up a large vacuum-sealed cut of beef with a serious expression, beside the words WORSE CUT and a red arrow pointing at the meat.",
+    concept: "The title sets up two opposing lists, but the thumbnail commits to a single moment: the \u201Cnever buy\u201D side. A large packaged cut of beef is held up to the camera while the person behind it reacts with a serious, concerned expression, so the viewer understands right away that this is about which cut to avoid.",
+    visualDirection: [
+      { label: "Composition", text: "The packaged cut fills the lower half of the frame and the face sits directly above it, so the product and the reaction are read together. A curved red arrow carries the eye from the headline down to the meat." },
+      { label: "Contrast", text: "Red and white lettering stands out against the darker shop interior, and the bright pink-red meat separates cleanly from the muted green apron behind it." },
+      { label: "Focal point", text: "The wide-eyed, serious expression is the emotional anchor; the large cut of beef in his hands is the subject the arrow points to." },
+      { label: "Color", text: "Warm shop lighting and red-toned meat keep the frame in one red-and-warm palette that echoes the headline." },
+      { label: "Curiosity", text: "Which cut is it, and why is it a bad buy? The viewer has to click to find out." },
+      { label: "Readability", text: "Two words \u2014 WORSE CUT \u2014 carry the message and stay legible at small sizes. The USDA Choice sticker adds a familiar buying-guide detail." }
+    ],
+    workflow: [
+      { stage: "ChatGPT", note: "Analyzed the title\u2019s \u201Cnever buy\u201D and \u201Cbuy every time\u201D contrast to find one clear visual hook, then shaped the concept and generation prompt around it." },
+      { stage: "Gemini", note: "Generated and explored the visual direction described in the prompt." },
+      { stage: "Final Thumbnail", note: "The strongest direction was developed into the final improved thumbnail." }
+    ]
+  },
+  {
+    number: "02",
+    type: "improved",
+    category: "IMPROVED THUMBNAIL / MYSTERY",
+    cardCategory: "MYSTERY / TRUE STORY",
+    title: "Every 11 Years, Someone Disappears at the Same Spot on the Appalachian Trail",
+    image: "improved-02.png",
+    alt: "Improved YouTube thumbnail: an aerial view of dense, misty forest with a red map pin and target rings marking one spot, the words SAME SPOT and 11 YEARS?, and a row of years connected by arrows.",
+    concept: "The title is built on a pattern: the same place, again and again, on an eleven-year rhythm. The thumbnail turns that pattern into a map. One red pin marks a single location in a vast, remote forest, and a line of years runs through it, so the viewer can see the repetition before reading the full title.",
+    visualDirection: [
+      { label: "Composition", text: "An aerial view of dense forest gives a sense of scale and isolation. The headline sits across the top, the pin marks the center, and the year timeline runs horizontally through the middle, creating a clear top-to-bottom reading path." },
+      { label: "Contrast", text: "Large white lettering on the dark green canopy is the strongest contrast in the frame, while the red pin and target rings are the only saturated color." },
+      { label: "Focal point", text: "The red map pin and the rings around it pull the eye to the exact spot the headline refers to." },
+      { label: "Color", text: "A restrained, muted green palette with a single red accent keeps the mood serious and lets the pin do the work." },
+      { label: "Curiosity", text: "The question mark after 11 YEARS? and the sequence of dates invite the viewer to look for the pattern." },
+      { label: "Readability", text: "SAME SPOT. and 11 YEARS? are short, large, and readable at a glance. The years act as supporting detail for viewers who look closer." }
+    ],
+    workflow: [
+      { stage: "ChatGPT", note: "Analyzed the title to find its strongest hook \u2014 a repeating pattern tied to one location \u2014 and developed the concept and generation prompt around it." },
+      { stage: "Gemini", note: "Generated and explored the visual direction described in the prompt." },
+      { stage: "Final Thumbnail", note: "The strongest direction was developed into the final improved thumbnail." }
+    ]
+  },
+  {
+    number: "03",
+    type: "improved",
+    category: "IMPROVED THUMBNAIL / HISTORY",
+    cardCategory: "HISTORY / MYSTERY",
+    title: "This Was the Scottish Family That Quietly Controlled the Opium Trade",
+    image: "improved-03.png",
+    alt: "Improved YouTube thumbnail: a bearded man in period dress holds a pipe beside a poppy field and a colonial house, with the words OPIUM and THE JARDINE FAMILY, faded handwriting, and a harbor map.",
+    concept: "The title promises a quiet, hidden influence, so the thumbnail leans on period atmosphere rather than shock. A figure in period dress with a pipe stands in front of a poppy field and a colonial house, while a single word, OPIUM, and the family name tell the viewer exactly what the story is about. The faded handwriting and map suggest history and records without competing for attention.",
+    visualDirection: [
+      { label: "Composition", text: "The figure stands on the right third, facing the camera, while the headline occupies the upper left. The house, palm trees, and poppy field extend across the background, layering setting and subject in one frame." },
+      { label: "Contrast", text: "Deep red display lettering with a gold outline stands out against the soft golden sky, and the dark coat separates the figure from the lighter field behind him." },
+      { label: "Focal point", text: "The man\u2019s steady gaze and the pipe in his hand form the main focal point, with the word OPIUM read first." },
+      { label: "Color", text: "Warm golden-hour tones, deep reds, and muted purple-and-white poppies give the frame a cohesive, aged, cinematic look." },
+      { label: "Curiosity", text: "A named family and one loaded word raise the question the title asks: how did a single family quietly control a trade like this?" },
+      { label: "Readability", text: "OPIUM is set in large serif capitals that read instantly, and THE JARDINE FAMILY below it names the subject clearly. The manuscript texture and map stay quiet in the background." }
+    ],
+    workflow: [
+      { stage: "ChatGPT", note: "Analyzed the title to find its strongest hook \u2014 a quiet, hidden influence tied to a named family \u2014 and developed the concept and generation prompt around it." },
+      { stage: "Gemini", note: "Generated and explored the visual direction described in the prompt." },
+      { stage: "Final Thumbnail", note: "The strongest direction was developed into the final improved thumbnail." }
+    ]
+  },
+
+  /* ------------ CATEGORY 02 — NEW THUMBNAILS / CHANNEL TESTS ------------ */
+  {
+    number: "01",
+    type: "new",
+    category: "CHANNEL TEST / FOOD",
+    cardCategory: "CHANNEL TEST / FOOD",
+    title: "Never Buy Ground Beef Again \u2013 Do THIS Butcher Secret Instead!",
+    image: "new-01.png",
+    alt: "Channel test thumbnail: a bearded butcher in an apron points at a pile of ground beef, with the words NEVER BUY STORE GROUND BEEF! and DO THIS SECRET INSTEAD!, a crossed-out packaged tray of meat, and a large cut of beef with a $4.99/lb price tag.",
+    concept: "The title sets up a warning and a fix, and the thumbnail splits them clearly. The warning is on the left \u2014 NEVER BUY STORE GROUND BEEF! \u2014 beside a crossed-out packaged tray of meat. The alternative is on the right \u2014 DO THIS SECRET INSTEAD! \u2014 beside a large, price-tagged cut of beef. A butcher stands between the two and points toward the ground beef, so he reads as the guide leading the viewer from one choice to the other. The secret itself is never spelled out, which is the hook.",
+    visualDirection: [
+      { label: "Composition", text: "Text frames both sides of the butcher: the warning stacked on the left, the alternative at the upper right. In the foreground the pile of ground beef sits at the center-bottom and the large cut rises on the right, so the eye travels from the crossed-out tray, through the pile, to the price-tagged cut." },
+      { label: "Subject", text: "A bearded butcher in a white shirt and dark apron, standing in a shop with knives on the wall and warm pendant lights. His clothing and setting say \u201Cbutcher\u201D before any text is read." },
+      { label: "Contrast", text: "Yellow and white lettering with heavy dark outlines stands out against the pale wall and warm wood tones. The red cross-out over the pale tray works as an immediate \u201Cno\u201D signal." },
+      { label: "Color", text: "Yellow and white type over warm browns, with the red of the raw beef as the main accent." },
+      { label: "Curiosity", text: "DO THIS SECRET INSTEAD! withholds what the secret is. The large price-tagged cut invites the viewer to wonder whether it is the answer." },
+      { label: "Readability", text: "The text is broken into short, large phrases \u2014 NEVER BUY, GROUND BEEF, DO THIS SECRET INSTEAD \u2014 that stay readable at small sizes." }
+    ],
+    workflow: [
+      { stage: "ChatGPT", note: "Analyzed the provided title to find its strongest hook \u2014 a warning paired with a \u201Csecret\u201D alternative \u2014 and developed a new concept and generation prompt from it." },
+      { stage: "Gemini", note: "Generated and explored the visual direction described in the prompt." },
+      { stage: "Final Thumbnail", note: "The strongest direction was developed into the final thumbnail concept." }
+    ]
+  },
+  {
+    number: "02",
+    type: "new",
+    category: "CHANNEL TEST / HISTORY / MYSTERY",
+    cardCategory: "CHANNEL TEST / HISTORY / MYSTERY",
+    title: "The Cumberland Square: Why the Government Fenced Four Corners",
+    image: "new-02.png",
+    alt: "Channel test thumbnail: a night-time cobblestone square lit by a central gas lamp, with townspeople in period dress standing beside wire fences at its corners, and a banner reading FENCED FOUR CORNERS.",
+    concept: "The title asks a direct question \u2014 why did the government fence four corners? \u2014 so the thumbnail shows the setting of the question rather than an answer: a night-time square with wire fences running to its corners, townspeople standing at the edges, and a single lamp glowing in the middle. A banner across the bottom names the subject, FENCED FOUR CORNERS. The mood is quiet and unsettled, which suits a mystery.",
+    visualDirection: [
+      { label: "Composition", text: "A wide, cinematic establishing shot. Fence lines run diagonally from both sides toward the center, leading the eye to the glowing lamp, while the groups on the left and the lone coated figure on the right frame the empty middle of the square. The banner keeps the text separate from the scene." },
+      { label: "Subject", text: "The fenced square itself, with people in period dress gathered at its edges and brick buildings and a horse-drawn wagon in the background." },
+      { label: "Contrast", text: "The warm lamp and lit windows glow against a dark, starry sky, and the light parchment-colored banner with dark type is the brightest large shape in the frame." },
+      { label: "Color", text: "A restrained sepia-and-amber palette with deep browns. FOUR CORNERS is set in deep red, the one color accent in the banner." },
+      { label: "Curiosity", text: "Why is a public square fenced off, and why are people gathered at its edges? The scene poses the question without answering it." },
+      { label: "Readability", text: "FENCED FOUR CORNERS is three words in large serif capitals with strong contrast against the banner, so it reads easily at small sizes. The scene above it works as atmosphere and supporting detail." }
+    ],
+    workflow: [
+      { stage: "ChatGPT", note: "Analyzed the provided title to find its strongest hook \u2014 a mystery about fenced-off corners \u2014 and developed a new concept and generation prompt from it." },
+      { stage: "Gemini", note: "Generated and explored the visual direction described in the prompt." },
+      { stage: "Final Thumbnail", note: "The strongest direction was developed into the final thumbnail concept." }
+    ]
+  },
+  {
+    number: "03",
+    type: "new",
+    category: "CHANNEL TEST / HISTORY",
+    cardCategory: "CHANNEL TEST / HISTORY",
+    title: "The Clever Chinese Miners Who Got Rich From the Gold Rush\u2019s Leftovers",
+    image: "new-03.png",
+    alt: "Channel test thumbnail: a portrait of a man in a dark cap and jacket in front of a vintage map marked Mother Lode and miners working sluice boxes beside piles of gravel, with the words THE GOLD LEFT BEHIND.",
+    concept: "The title is about people who got rich from what the Gold Rush left behind, so the thumbnail puts a human face at the center and the setting around him: a vintage map marked Mother Lode on the left, miners working sluice boxes beside piles of gravel on the right. The headline, THE GOLD LEFT BEHIND, states the idea in a few words and lets the portrait carry the story.",
+    visualDirection: [
+      { label: "Composition", text: "Layered depth. The headline sits in the left third over the map, the portrait rises through the center and overlaps both sides, miners work at the right, and gravel piles fill the foreground. The result is a clear left-to-right read from text to face to setting." },
+      { label: "Subject", text: "A man in a dark cap and dark jacket looking directly at the viewer, with a calm, composed expression." },
+      { label: "Contrast", text: "White condensed lettering with a dark outline stands out on the pale map, and the man\u2019s dark cap and clothing separate him from the lighter mid-tones behind him." },
+      { label: "Color", text: "Warm sepia and golden tones with a sunset-lit sky. The highlighted Mother Lode region on the map echoes the gold in the gravel." },
+      { label: "Curiosity", text: "THE GOLD LEFT BEHIND suggests wealth others overlooked, and the viewer wants to know who found it and how." },
+      { label: "Readability", text: "The headline is stacked in large lines of tall condensed capitals, and the portrait reads clearly at small sizes. The map labels act as texture rather than information." }
+    ],
+    workflow: [
+      { stage: "ChatGPT", note: "Analyzed the provided title to find its strongest hook \u2014 wealth found in what others left behind \u2014 and developed a new concept and generation prompt from it." },
+      { stage: "Gemini", note: "Generated and explored the visual direction described in the prompt." },
+      { stage: "Final Thumbnail", note: "The strongest direction was developed into the final thumbnail concept." }
+    ]
+  }
+];
+
+/* Labels used by cards and the modal for each category */
+const TYPES = {
+  bodycam:  { short: "SPEC",     note: "Spec / portfolio sample \u2014 created to demonstrate thumbnail concepts for police bodycam and true-crime channels. Not affiliated with, and not used by, any real channel." },
+  growth:   { short: "FEATURED", note: "A completed thumbnail design for this video concept." },
+  improved: { short: "IMPROVED", note: "An improvement of an existing thumbnail concept." },
+  new:      { short: "NEW",      note: "A new thumbnail concept created from the provided title as channel test work." }
+};
+
+/* ==========================================================================
+   APP
+   ========================================================================== */
+(function () {
+  'use strict';
+
+  /* ---------- Helpers ---------- */
+  const $  = (sel, ctx = document) => ctx.querySelector(sel);
+  const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
+  const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- Missing-image helper (shows the expected filename) ---------- */
+  document.addEventListener('error', (e) => {
+    const img = e.target;
+    if (img && img.tagName === 'IMG' && img.getAttribute('src') && !img.src.startsWith('data:')) {
+      img.classList.add('is-missing');
+      if (img.parentElement) img.parentElement.setAttribute('data-missing', img.getAttribute('src'));
+    }
+  }, true);
+  document.addEventListener('load', (e) => {
+    const img = e.target;
+    if (img && img.tagName === 'IMG') {
+      img.classList.remove('is-missing');
+      if (img.parentElement) img.parentElement.removeAttribute('data-missing');
+    }
+  }, true);
+
+  /* ---------- Render cards ---------- */
+  const openButton = (p, i) => `
+    <button type="button" class="btn btn-ghost" data-open="${i}" aria-haspopup="dialog"
+            aria-label="View ${esc(TYPES[p.type].short.toLowerCase())} project: ${esc(p.title)}">VIEW PROJECT <span class="arr" aria-hidden="true">→</span></button>`;
+
+  // Featured — bodycam spec cards
+  const featuredCard = (p, i) => `
+    <article class="feature-card reveal" data-project="${i}" style="--d:${(i * 0.08).toFixed(2)}s">
+      <div class="feature-media">
+        <img src="${esc(p.image)}" alt="${esc(p.alt)}" width="1671" height="941" loading="${i === 0 ? 'eager' : 'lazy'}" fetchpriority="${i === 0 ? 'high' : 'auto'}">
+        <span class="feature-badge" aria-hidden="true">SPEC THUMBNAIL</span>
+      </div>
+      <div class="feature-info">
+        <p class="feature-cat">${esc(p.category)}</p>
+        <h3 class="feature-title">${esc(p.title)}</h3>
+        ${openButton(p, i)}
+      </div>
+    </article>`;
+
+  // Featured Thumbnails — newest work, 2x2 grid (shares the same visual
+  // language as the bodycam cards above)
+  const growthCard = (p, i) => `
+    <article class="feature-card reveal" data-project="${i}" style="--d:${(i * 0.08).toFixed(2)}s">
+      <div class="feature-media">
+        <img src="${esc(p.image)}" alt="${esc(p.alt)}" width="1024" height="572" loading="lazy">
+        <span class="feature-badge" aria-hidden="true">FEATURED</span>
+      </div>
+      <div class="feature-info">
+        <p class="feature-cat">${esc(p.category)}</p>
+        <h3 class="feature-title">${esc(p.title)}</h3>
+        ${openButton(p, i)}
+      </div>
+    </article>`;
+
+  // Improved Thumbnails — large alternating editorial rows
+  const improvedCard = (p, i) => `
+    <article class="project reveal" data-project="${i}">
+      <div class="project-media">
+        <img src="${esc(p.image)}" alt="${esc(p.alt)}" width="1024" height="572" loading="lazy">
+      </div>
+      <div class="project-info">
+        <p class="project-num" aria-hidden="true">${esc(p.number)}</p>
+        <p class="project-cat">${esc(p.cardCategory)}</p>
+        <h3 class="project-title">${esc(p.title)}</h3>
+        ${openButton(p, i)}
+      </div>
+    </article>`;
+
+  // New Thumbnails / Channel Tests — lead card + pair, with badge
+  const testCard = (p, i) => `
+    <article class="test reveal" data-project="${i}">
+      <div class="test-media">
+        <img src="${esc(p.image)}" alt="${esc(p.alt)}" width="1024" height="572" loading="lazy">
+        <span class="test-badge" aria-hidden="true">NEW ${esc(p.number)}</span>
+      </div>
+      <div class="test-info">
+        <div>
+          <p class="test-cat">${esc(p.cardCategory)}</p>
+          <h3 class="test-title">${esc(p.title)}</h3>
+        </div>
+        ${openButton(p, i)}
+      </div>
+    </article>`;
+
+  const featuredEl = $('#projectsFeatured');
+  const growthEl = $('#projectsGrowth');
+  const improvedEl = $('#projectsImproved');
+  const testsEl = $('#projectsNew');
+  PROJECTS.forEach((p, i) => {
+    if (p.type === 'bodycam') featuredEl.insertAdjacentHTML('beforeend', featuredCard(p, i));
+    else if (p.type === 'growth') growthEl.insertAdjacentHTML('beforeend', growthCard(p, i));
+    else if (p.type === 'improved') improvedEl.insertAdjacentHTML('beforeend', improvedCard(p, i));
+    else testsEl.insertAdjacentHTML('beforeend', testCard(p, i));
+  });
+
+  /* ---------- Mobile menu ---------- */
+  const burger = $('#burger');
+  const menu = $('#mobileMenu');
+
+  function setMenu(open) {
+    burger.setAttribute('aria-expanded', String(open));
+    burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    menu.classList.toggle('open', open);
+  }
+  burger.addEventListener('click', () => setMenu(burger.getAttribute('aria-expanded') !== 'true'));
+  $$('a', menu).forEach((a) => a.addEventListener('click', () => setMenu(false)));
+  window.matchMedia('(min-width: 900px)').addEventListener('change', (e) => { if (e.matches) setMenu(false); });
+
+  /* ---------- Project modal ---------- */
+  const page = $('#page');
+  const modal = $('#modal');
+  const panel = $('#modalPanel');
+  const closeBtn = $('#modalClose');
+  const prevBtn = $('#modalPrev');
+  const nextBtn = $('#modalNext');
+  const el = {
+    num: $('#modalNum'), cat: $('#modalCat'), img: $('#modalImg'), title: $('#modalTitle'), note: $('#modalNote'),
+    concept: $('#modalConcept'), direction: $('#modalDirection'), workflow: $('#modalWorkflow')
+  };
+  let currentIndex = 0;
+  let lastTrigger = null;
+
+  // Previous / next stay inside the same category (bodycam / improved / new)
+  function neighbour(i, step) {
+    const group = PROJECTS.map((_, k) => k).filter((k) => PROJECTS[k].type === PROJECTS[i].type);
+    return group[(group.indexOf(i) + step + group.length) % group.length];
+  }
+
+  function renderModal(i) {
+    const p = PROJECTS[i];
+    currentIndex = i;
+    el.num.textContent = TYPES[p.type].short + ' ' + p.number;
+    el.cat.textContent = p.category;
+    el.img.src = p.image;
+    el.img.alt = p.alt;
+    el.title.textContent = p.title;
+    el.note.textContent = TYPES[p.type].note;
+    el.concept.textContent = p.concept;
+    el.direction.innerHTML = p.visualDirection.map((d) =>
+      `<div><dt>${esc(d.label)}</dt><dd>${esc(d.text)}</dd></div>`).join('');
+    el.workflow.innerHTML = p.workflow.map((w) =>
+      `<li><span class="wf-stage">${esc(w.stage)}</span><p>${esc(w.note)}</p><span class="wf-arrow" aria-hidden="true">→</span></li>`).join('');
+
+    const prev = PROJECTS[neighbour(i, -1)];
+    const next = PROJECTS[neighbour(i, 1)];
+    prevBtn.innerHTML = `<span aria-hidden="true">←</span> PREVIOUS ${esc(prev.number)}`;
+    prevBtn.setAttribute('aria-label', 'Previous project: ' + prev.title);
+    nextBtn.innerHTML = `NEXT ${esc(next.number)} <span aria-hidden="true">→</span>`;
+    nextBtn.setAttribute('aria-label', 'Next project: ' + next.title);
+    panel.scrollTop = 0;
+  }
+
+  function openProject(i, trigger) {
+    lastTrigger = trigger || document.activeElement;
+    renderModal(i);
+    const scrollbar = window.innerWidth - document.documentElement.clientWidth;
+    document.body.style.overflow = 'hidden';
+    if (scrollbar > 0) document.body.style.paddingRight = scrollbar + 'px';
+    page.inert = true;
+    modal.classList.add('open');
+    closeBtn.focus();
+  }
+
+  function closeProject() {
+    if (!modal.classList.contains('open')) return;
+    modal.classList.remove('open');
+    page.inert = false;
+    document.body.style.overflow = '';
+    document.body.style.paddingRight = '';
+    if (lastTrigger && typeof lastTrigger.focus === 'function') lastTrigger.focus({ preventScroll: true });
+  }
+
+  // Open from a card (mouse click anywhere on it, or keyboard via its button)
+  $('#main').addEventListener('click', (e) => {
+    const card = e.target.closest('[data-project]');
+    if (!card) return;
+    openProject(Number(card.dataset.project), $('[data-open]', card));
+  });
+
+  closeBtn.addEventListener('click', closeProject);
+  prevBtn.addEventListener('click', () => renderModal(neighbour(currentIndex, -1)));
+  nextBtn.addEventListener('click', () => renderModal(neighbour(currentIndex, 1)));
+
+  // Click outside the panel closes
+  modal.addEventListener('click', (e) => {
+    if (!e.target.closest('.modal-panel')) closeProject();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (modal.classList.contains('open')) {
+      if (e.key === 'Escape') { e.preventDefault(); closeProject(); return; }
+      if (e.key === 'Tab') {
+        // Keep focus inside the dialog
+        const focusable = $$('button, a[href], [tabindex]:not([tabindex="-1"])', panel).filter((n) => !n.disabled && n.offsetParent !== null);
+        if (!focusable.length) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    } else if (e.key === 'Escape' && menu.classList.contains('open')) {
+      setMenu(false);
+      burger.focus();
+    }
+  });
+
+  /* ---------- Scroll reveal ---------- */
+  const revealEls = $$('.reveal');
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+    revealEls.forEach((n) => revealObserver.observe(n));
+  } else {
+    revealEls.forEach((n) => n.classList.add('in'));
+  }
+
+  /* ---------- Active navigation state ---------- */
+  const navLinks = $$('[data-navlink]');
+  function setActiveNav(name) {
+    navLinks.forEach((a) => {
+      const on = a.dataset.navlink === name;
+      a.classList.toggle('active', on);
+      if (on) a.setAttribute('aria-current', 'location'); else a.removeAttribute('aria-current');
+    });
+  }
+  if ('IntersectionObserver' in window) {
+    const navObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) setActiveNav(entry.target.dataset.nav);
+      });
+    }, { rootMargin: '-45% 0px -54% 0px' });
+    $$('[data-nav]').forEach((s) => navObserver.observe(s));
+  }
+  window.addEventListener('scroll', () => {
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) setActiveNav('contact');
+  }, { passive: true });
+
+  /* ---------- ChatG Method interactions ---------- */
+  const flowNodes = $$('.flow-node');
+  const stepEls = $$('.step');
+  let demoTimer = null;
+
+  function setStep(n) {
+    stepEls.forEach((s) => {
+      const on = Number(s.dataset.step) === n;
+      s.classList.toggle('active', on);
+      $('.step-btn', s).setAttribute('aria-pressed', String(on));
+    });
+    flowNodes.forEach((node) => {
+      const start = Number(node.dataset.step);
+      const end = Number(node.dataset.end);
+      node.classList.toggle('passed', n > 0 && start <= n);
+      node.classList.toggle('current', n >= start && n <= end);
+    });
+  }
+  function stopDemo() { if (demoTimer) { clearInterval(demoTimer); demoTimer = null; } }
+  function runDemo() {
+    let n = 0;
+    demoTimer = setInterval(() => {
+      n += 1;
+      setStep(n);
+      if (n >= 6) stopDemo();
+    }, 560);
+  }
+
+  stepEls.forEach((s) => s.addEventListener('click', () => { stopDemo(); setStep(Number(s.dataset.step)); }));
+  flowNodes.forEach((node) => node.addEventListener('click', () => { stopDemo(); setStep(Number(node.dataset.step)); }));
+
+  setStep(0);
+  const flowEl = $('#flow');
+  if (reduceMotion || !('IntersectionObserver' in window)) {
+    setStep(1);
+  } else {
+    // Play through the six steps once, the first time the workflow scrolls into view
+    const demoObserver = new IntersectionObserver((entries) => {
+      if (entries.some((en) => en.isIntersecting)) { demoObserver.disconnect(); setTimeout(runDemo, 500); }
+    }, { threshold: 0.5 });
+    demoObserver.observe(flowEl);
+  }
+})();
+</script>
+</body>
+</html>
