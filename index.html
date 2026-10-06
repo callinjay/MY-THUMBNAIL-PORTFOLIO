@@ -1228,6 +1228,145 @@ img.is-missing { visibility: hidden; }
   .footer-grid { grid-template-columns: 1fr; }
 }
 
+
+/* ==========================================================================
+   12B. COMPILATION TEST TAGS, CAE METHOD, PRINCIPLES, MINI WORKFLOW
+   ========================================================================== */
+.tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.tag {
+  font-size: .66rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  color: var(--text-2);
+  border: 1px solid var(--line);
+  padding: 5px 10px;
+}
+
+.brief-box {
+  margin-top: clamp(48px, 6vw, 72px);
+  padding-top: clamp(32px, 4vw, 48px);
+  border-top: 1px solid var(--line);
+}
+.brief-label { font-size: .72rem; font-weight: 700; letter-spacing: .18em; color: var(--red); }
+.brief-box p { margin-top: 14px; color: var(--text-2); max-width: 70ch; }
+.brief-niches {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+.brief-niches span { padding: 8px 14px; border: 1px solid var(--line); }
+
+.cae-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(20px, 2.4vw, 32px);
+  margin-top: clamp(40px, 5vw, 64px);
+}
+.cae-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  padding: clamp(28px, 3vw, 36px) clamp(24px, 2.6vw, 30px);
+  transition: border-color .3s, transform .4s var(--ease);
+}
+.cae-card:hover { border-color: var(--red); transform: translateY(-4px); }
+.cae-letter { font-size: clamp(2.2rem, 4vw, 3rem); font-weight: 800; color: var(--red); line-height: 1; }
+.cae-card h4 { margin-top: 16px; font-size: 1.05rem; font-weight: 800; letter-spacing: .02em; }
+.cae-card p { margin-top: 10px; color: var(--text-2); font-size: .92rem; line-height: 1.55; }
+
+.cae-philosophy {
+  margin-top: clamp(56px, 7vw, 88px);
+  padding-top: clamp(32px, 4vw, 48px);
+  border-top: 1px solid var(--line);
+}
+.cae-philosophy h3 {
+  font-size: clamp(1.3rem, 2.2vw, 1.8rem);
+  font-weight: 800;
+  letter-spacing: -.02em;
+  max-width: 28ch;
+}
+.cae-philosophy p { margin-top: 16px; color: var(--text-2); max-width: 68ch; }
+.cae-note {
+  margin-top: 20px;
+  font-size: .86rem;
+  color: var(--text-2);
+}
+.cae-note a { color: var(--text); text-decoration: underline; text-decoration-color: var(--red); }
+.cae-note a:hover { color: var(--red); }
+
+.cae-examples {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(20px, 2.4vw, 32px);
+  margin-top: clamp(40px, 5vw, 64px);
+}
+.cae-example { border: 1px solid var(--line); background: var(--card); overflow: hidden; }
+.cae-example-media { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: #000; }
+.cae-example-media img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.cae-example-body { padding: 20px 22px 24px; }
+.cae-example-cat { font-size: .7rem; font-weight: 700; letter-spacing: .14em; color: var(--red); }
+.cae-example-list { margin-top: 14px; display: flex; flex-direction: column; gap: 7px; font-size: .86rem; color: var(--text-2); }
+.cae-example-list b { color: var(--text); font-weight: 700; }
+
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(20px, 2.4vw, 28px);
+  margin-top: clamp(32px, 4vw, 56px);
+}
+.principle-card { position: relative; padding-top: 22px; border-top: 1px solid var(--line); }
+.principle-card::before {
+  content: "";
+  position: absolute;
+  top: -1px; left: 0; right: 0;
+  height: 2px;
+  background: var(--red);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .5s var(--ease);
+}
+.principle-card:hover::before { transform: scaleX(1); }
+.principle-num { font-size: .72rem; font-weight: 700; letter-spacing: .18em; color: var(--red); }
+.principle-card h4 { margin-top: 10px; font-size: 1.05rem; font-weight: 800; letter-spacing: -.01em; }
+.principle-card p { margin-top: 10px; color: var(--text-2); font-size: .88rem; line-height: 1.5; }
+
+.mini-flow {
+  margin-top: clamp(56px, 6vw, 88px);
+  padding-top: clamp(32px, 4vw, 48px);
+  border-top: 1px solid var(--line);
+}
+.mini-flow-label { font-size: .72rem; font-weight: 700; letter-spacing: .18em; color: var(--red); }
+.mini-flow-chain {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+}
+.mini-flow-node {
+  padding: 11px 18px;
+  border: 1px solid var(--line);
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .05em;
+}
+.mini-flow-sep { color: var(--muted); font-size: .9rem; }
+.mini-flow-note { margin-top: 20px; color: var(--text-2); max-width: 72ch; }
+
+@media (max-width: 1000px) {
+  .principles-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 900px) {
+  .cae-examples { grid-template-columns: 1fr; }
+}
+@media (max-width: 700px) {
+  .cae-grid { grid-template-columns: 1fr; }
+  .principles-grid { grid-template-columns: 1fr; }
+}
+
 /* ==========================================================================
    13. REDUCED MOTION
    ========================================================================== */
@@ -1263,7 +1402,9 @@ img.is-missing { visibility: hidden; }
     <nav aria-label="Primary">
       <ul class="nav-links">
         <li><a href="#work" data-navlink="work">Work</a></li>
+        <li><a href="#cae-method" data-navlink="work">CAE Method</a></li>
         <li><a href="#method" data-navlink="method">ChatG Method</a></li>
+        <li><a href="#process" data-navlink="method">Process</a></li>
         <li><a href="#about" data-navlink="about">About</a></li>
         <li><a href="#contact" data-navlink="contact">Contact</a></li>
       </ul>
@@ -1280,10 +1421,12 @@ img.is-missing { visibility: hidden; }
     <nav aria-label="Mobile">
       <ul>
         <li style="--i:0"><a href="#work" data-navlink="work">Work</a></li>
-        <li style="--i:1"><a href="#method" data-navlink="method">ChatG Method</a></li>
-        <li style="--i:2"><a href="#about" data-navlink="about">About</a></li>
-        <li style="--i:3"><a href="#contact" data-navlink="contact">Contact</a></li>
-        <li style="--i:4" class="menu-cta"><a class="btn btn-primary" href="#contact">LET'S WORK</a></li>
+        <li style="--i:1"><a href="#cae-method" data-navlink="work">CAE Method</a></li>
+        <li style="--i:2"><a href="#method" data-navlink="method">ChatG Method</a></li>
+        <li style="--i:3"><a href="#process" data-navlink="method">Process</a></li>
+        <li style="--i:4"><a href="#about" data-navlink="about">About</a></li>
+        <li style="--i:5"><a href="#contact" data-navlink="contact">Contact</a></li>
+        <li style="--i:6" class="menu-cta"><a class="btn btn-primary" href="#contact">LET'S WORK</a></li>
       </ul>
     </nav>
   </div>
@@ -1302,7 +1445,7 @@ img.is-missing { visibility: hidden; }
       <p class="hero-lead">AI-assisted thumbnail concepts built with my ChatG Method — combining ChatGPT for creative direction and Gemini for visual generation.</p>
       <div class="btn-row">
         <a class="btn btn-primary" href="#work">VIEW MY WORK <span class="arr" aria-hidden="true">→</span></a>
-        <a class="btn btn-ghost" href="#method">EXPLORE MY METHOD</a>
+        <a class="btn btn-ghost" href="#cae-method">SEE THE CAE METHOD</a>
       </div>
     </div>
 
@@ -1341,12 +1484,124 @@ img.is-missing { visibility: hidden; }
       </div>
       <h2 class="h2" id="growthTitle">FEATURED WORK.</h2>
       <p class="section-desc">My four strongest thumbnail designs — the projects that best represent my visual storytelling and design standard.</p>
-      <a class="text-link" href="#latest-work">SEE MY LATEST WORK <span class="arr" aria-hidden="true">↓</span></a>
+      <a class="text-link" href="#compilation-test">SEE THE COMPILATION TEST <span class="arr" aria-hidden="true">↓</span></a>
     </div>
 
     <!-- Cards are rendered from the PROJECTS array (type "growth") in the script below -->
     <div class="grow-grid" id="projectsGrowth">
       <noscript><p class="section-desc">Please enable JavaScript to view the project cards.</p></noscript>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================================
+     YOUTUBE COMPILATION THUMBNAIL TEST — application case study
+     ==================================================================== -->
+<section class="section section--alt" id="compilation-test" data-nav="work" aria-labelledby="compilationTitle">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="label-row">
+        <p class="label">02 — COMPILATION TEST</p>
+        <p class="chip">APPLICATION PROJECT / THUMBNAIL TEST</p>
+      </div>
+      <h2 class="h2" id="compilationTitle">YOUTUBE COMPILATION THUMBNAIL TEST.</h2>
+      <p class="section-desc">3 Niches. 3 Concepts. Built for YouTube.</p>
+      <p class="section-desc">A thumbnail test created for a YouTube compilation-channel application. Each concept was designed with AI-assisted visual generation, strong visual hierarchy, clear storytelling, and YouTube-first composition.</p>
+      <a class="text-link" href="#cae-method">SEE THE CAE METHOD <span class="arr" aria-hidden="true">↓</span></a>
+    </div>
+
+    <!-- Cards are rendered from the PROJECTS array (type "cae") in the script below -->
+    <div class="feature-grid" id="projectsCompilation">
+      <noscript><p class="section-desc">Please enable JavaScript to view the project cards.</p></noscript>
+    </div>
+
+    <div class="brief-box reveal">
+      <p class="brief-label">APPLICATION BRIEF</p>
+      <p>Create 3 AI-generated YouTube thumbnails across three compilation niches.</p>
+      <div class="brief-niches">
+        <span>MEMES</span>
+        <span>FUNNY &amp; CUTE CATS</span>
+        <span>FAST WORKERS / SATISFYING WORKERS</span>
+      </div>
+      <p>Each thumbnail was created specifically for YouTube with a strong subject, clear visual storytelling, realistic presentation, and a focus on immediate comprehension.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================================
+     THE CAE METHOD — circle / arrow / emoji visual attention system
+     ==================================================================== -->
+<section class="section" id="cae-method" data-nav="work" aria-labelledby="caeTitle">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="label-row">
+        <p class="label">03 — CAE METHOD</p>
+        <p class="chip">VISUAL ATTENTION SYSTEM</p>
+      </div>
+      <h2 class="h2" id="caeTitle">THE CAE METHOD.</h2>
+      <p class="section-desc">Circle. Arrow. Emoji.</p>
+      <p class="section-desc">CAE is a simple visual attention system I use when the content benefits from additional visual direction. The goal is to help viewers understand the key moment quickly while keeping the thumbnail clean and purposeful.</p>
+      <a class="text-link" href="#latest-work">SEE MORE WORK <span class="arr" aria-hidden="true">↓</span></a>
+    </div>
+
+    <div class="cae-grid">
+      <article class="cae-card reveal">
+        <p class="cae-letter" aria-hidden="true">C</p>
+        <h4>CIRCLE</h4>
+        <p>Highlights the most important, surprising, or funny detail in the frame. The circle helps isolate the key visual element so the viewer knows exactly where to look.</p>
+      </article>
+      <article class="cae-card reveal" style="--d:.08s">
+        <p class="cae-letter" aria-hidden="true">A</p>
+        <h4>ARROW</h4>
+        <p>Directs the viewer&rsquo;s eye toward the key moment. The arrow creates a clear visual path toward the subject or action that matters most.</p>
+      </article>
+      <article class="cae-card reveal" style="--d:.16s">
+        <p class="cae-letter" aria-hidden="true">E</p>
+        <h4>EMOJI</h4>
+        <p>Adds an immediate emotional reaction that reinforces the tone of the thumbnail. An emoji can quickly communicate humor, surprise, excitement, or shock when it fits the content.</p>
+      </article>
+    </div>
+
+    <div class="cae-philosophy reveal">
+      <h3>CAE IS ABOUT DIRECTION &mdash; NOT CLUTTER.</h3>
+      <p>I don&rsquo;t use circles, arrows, or emojis simply to fill space. Each element should have a purpose. If the image already communicates the idea clearly, I keep the design clean. When additional visual direction helps, CAE can reinforce the story and guide attention toward the intended focal point.</p>
+      <p class="cae-note">All three thumbnails in the <a href="#compilation-test">YouTube Compilation Thumbnail Test</a> above use CAE deliberately &mdash; click any of them to see exactly how its circle, arrow, and emoji were chosen.</p>
+    </div>
+
+    <div class="cae-examples">
+      <article class="cae-example reveal">
+        <div class="cae-example-media"><img src="cae-meme-02.png" alt="A second meme-style example: a police officer caught mid-jump over a fence, circled and highlighted with an arrow, as another officer leans on a patrol car in the foreground." width="1024" height="572" loading="lazy"></div>
+        <div class="cae-example-body">
+          <p class="cae-example-cat">MEMES</p>
+          <p class="cae-example-list">
+            <span><b>Circle</b> &rarr; Funny moment</span>
+            <span><b>Arrow</b> &rarr; Reaction/action</span>
+            <span><b>Emoji</b> &rarr; Laugh</span>
+          </p>
+        </div>
+      </article>
+      <article class="cae-example reveal" style="--d:.08s">
+        <div class="cae-example-media"><img src="cae-cat-02.png" alt="A second cat example: two cats resting in a glass enclosure, with one cat's sleepy upside-down face circled and highlighted with an arrow." width="1024" height="572" loading="lazy"></div>
+        <div class="cae-example-body">
+          <p class="cae-example-cat">FUNNY CATS</p>
+          <p class="cae-example-list">
+            <span><b>Circle</b> &rarr; Cat's expression</span>
+            <span><b>Arrow</b> &rarr; Funny interaction</span>
+            <span><b>Emoji</b> &rarr; Laugh</span>
+          </p>
+        </div>
+      </article>
+      <article class="cae-example reveal" style="--d:.16s">
+        <div class="cae-example-media"><img src="cae-worker-02.png" alt="A second worker example: a lineman working inside a high-voltage transmission tower fitting at sunset, circled and highlighted with an arrow." width="1024" height="572" loading="lazy"></div>
+        <div class="cae-example-body">
+          <p class="cae-example-cat">SATISFYING WORKERS</p>
+          <p class="cae-example-list">
+            <span><b>Circle</b> &rarr; Important action</span>
+            <span><b>Arrow</b> &rarr; Machine/process</span>
+            <span><b>Emoji</b> &rarr; Surprise/Wow</span>
+          </p>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -1358,7 +1613,7 @@ img.is-missing { visibility: hidden; }
   <div class="container">
     <div class="section-head reveal">
       <div class="label-row">
-        <p class="label">02 — LATEST WORK</p>
+        <p class="label">04 — LATEST WORK</p>
         <p class="chip">NEW COMPILATIONS</p>
       </div>
       <h2 class="h2" id="latestTitle">LATEST WORK.</h2>
@@ -1379,7 +1634,7 @@ img.is-missing { visibility: hidden; }
 <section class="section" id="method" data-nav="method" aria-labelledby="methodTitle">
   <div class="container">
     <div class="section-head reveal">
-      <p class="label">03 — CHATG METHOD</p>
+      <p class="label">05 — CHATG METHOD</p>
       <h2 class="h2" id="methodTitle">MY AI-ASSISTED THUMBNAIL WORKFLOW.</h2>
       <p class="section-desc">I use ChatGPT to turn a video title into a strong visual concept and generation prompt, then use Gemini to explore and develop the visual direction.</p>
     </div>
@@ -1460,6 +1715,22 @@ img.is-missing { visibility: hidden; }
         <p class="step-desc">Develop the selected direction into the final thumbnail concept.</p>
       </li>
     </ol>
+
+    <div class="mini-flow reveal">
+      <p class="mini-flow-label">REFINED WORKFLOW</p>
+      <div class="mini-flow-chain">
+        <span class="mini-flow-node">CHATGPT<br><small style="font-weight:600;letter-spacing:.02em;color:var(--text-2)">Creative Direction</small></span>
+        <span class="mini-flow-sep" aria-hidden="true">&rarr;</span>
+        <span class="mini-flow-node">PROMPT<br><small style="font-weight:600;letter-spacing:.02em;color:var(--text-2)">Visual Concept</small></span>
+        <span class="mini-flow-sep" aria-hidden="true">&rarr;</span>
+        <span class="mini-flow-node">GEMINI / AI GENERATION<br><small style="font-weight:600;letter-spacing:.02em;color:var(--text-2)">Image Creation</small></span>
+        <span class="mini-flow-sep" aria-hidden="true">&rarr;</span>
+        <span class="mini-flow-node">EDITING<br><small style="font-weight:600;letter-spacing:.02em;color:var(--text-2)">Composition + Visual Refinement</small></span>
+        <span class="mini-flow-sep" aria-hidden="true">&rarr;</span>
+        <span class="mini-flow-node">FINAL THUMBNAIL<br><small style="font-weight:600;letter-spacing:.02em;color:var(--text-2)">YouTube-Ready Design</small></span>
+      </div>
+      <p class="mini-flow-note">I use AI as a creative production tool, not as a replacement for design decisions. The final direction comes from composition, visual hierarchy, storytelling, subject selection, contrast, and thumbnail strategy.</p>
+    </div>
   </div>
 </section>
 
@@ -1470,7 +1741,7 @@ img.is-missing { visibility: hidden; }
   <div class="container">
     <div class="section-head reveal">
       <div class="label-row">
-        <p class="label">04 — BODYCAM &amp; TRUE CRIME</p>
+        <p class="label">06 — BODYCAM &amp; TRUE CRIME</p>
         <p class="chip">SPEC SAMPLES</p>
       </div>
       <h2 class="h2" id="workTitle">FEATURED BODYCAM &amp; TRUE CRIME THUMBNAILS.</h2>
@@ -1491,7 +1762,7 @@ img.is-missing { visibility: hidden; }
 <section class="section" id="portfolio" data-nav="work" aria-labelledby="portfolioTitle">
   <div class="container">
     <div class="section-head reveal">
-      <p class="label">05 — IMPROVED THUMBNAILS</p>
+      <p class="label">07 — IMPROVED THUMBNAILS</p>
       <h2 class="h2" id="portfolioTitle">IMPROVING THE VISUAL STORY.</h2>
       <p class="section-desc">A selection of thumbnail improvement projects focused on stronger visual hierarchy, clearer storytelling, and more immediate viewer curiosity.</p>
       <a class="text-link" href="#new-work">SEE THE NEW THUMBNAILS <span class="arr" aria-hidden="true">↓</span></a>
@@ -1511,7 +1782,7 @@ img.is-missing { visibility: hidden; }
   <div class="container">
     <div class="section-head reveal">
       <div class="label-row">
-        <p class="label">06 — NEW THUMBNAILS</p>
+        <p class="label">08 — NEW THUMBNAILS</p>
         <p class="chip">CHANNEL TESTS</p>
       </div>
       <h2 class="h2" id="newTitle">NEW VISUAL DIRECTIONS.</h2>
@@ -1531,10 +1802,10 @@ img.is-missing { visibility: hidden; }
 
     <div class="about-grid">
       <div class="reveal">
-        <p class="label">07 — ABOUT</p>
+        <p class="label">09 — ABOUT</p>
         <h2 class="h2" id="aboutTitle">DESIGN STARTS WITH THE STORY.</h2>
       </div>
-      <p class="about-text reveal" style="--d:.12s">I approach thumbnail design by first understanding the story behind a video, then finding a visual concept that communicates the subject quickly and creates curiosity. My ChatG Method combines ChatGPT for creative direction and prompt development with Gemini for visual generation and exploration.</p>
+      <p class="about-text reveal" style="--d:.12s">I'm a YouTube thumbnail designer focused on AI-assisted visual creation, thumbnail composition, visual storytelling, and attention-driven design. I approach thumbnail design by first understanding the story behind a video, then finding a visual concept that communicates the subject quickly and creates curiosity. My ChatG Method combines ChatGPT for creative direction and prompt development with Gemini for visual generation and exploration.</p>
     </div>
 
     <dl class="info-cards">
@@ -1584,6 +1855,18 @@ img.is-missing { visibility: hidden; }
           <h4>AI-Assisted Creative Workflow</h4>
           <p>ChatGPT for direction, Gemini for generation.</p>
         </article>
+        <article class="cap reveal" style="--d:.06s">
+          <h4>Meme &amp; Reaction Thumbnail Design</h4>
+          <p>Circle, arrow, and emoji visual direction for reaction-driven and meme-style content.</p>
+        </article>
+        <article class="cap reveal" style="--d:.12s">
+          <h4>YouTube Compilation Thumbnails</h4>
+          <p>Thumbnail concepts built across multiple compilation niches, from memes to satisfying worker clips.</p>
+        </article>
+        <article class="cap reveal" style="--d:.18s">
+          <h4>Visual Hierarchy &amp; Color Direction</h4>
+          <p>Using scale, contrast, and color to guide the eye to the thumbnail's one strongest focal point.</p>
+        </article>
       </div>
     </div>
 
@@ -1605,6 +1888,33 @@ img.is-missing { visibility: hidden; }
       </div>
     </div>
 
+    <!-- Thumbnail Principles -->
+    <div class="subsection" aria-labelledby="principlesTitle">
+      <h3 class="sub-title reveal" id="principlesTitle">MY THUMBNAIL PRINCIPLES</h3>
+      <div class="principles-grid">
+        <article class="principle-card reveal">
+          <p class="principle-num">01</p>
+          <h4>INSTANT CLARITY</h4>
+          <p>The viewer should understand the subject or joke within a fraction of a second.</p>
+        </article>
+        <article class="principle-card reveal" style="--d:.06s">
+          <p class="principle-num">02</p>
+          <h4>ONE STRONG FOCAL POINT</h4>
+          <p>Every thumbnail needs a dominant visual element that immediately attracts attention.</p>
+        </article>
+        <article class="principle-card reveal" style="--d:.12s">
+          <p class="principle-num">03</p>
+          <h4>VISUAL HIERARCHY</h4>
+          <p>Color, scale, contrast, expressions, and visual cues should guide the viewer naturally through the image.</p>
+        </article>
+        <article class="principle-card reveal" style="--d:.18s">
+          <p class="principle-num">04</p>
+          <h4>CLICKABLE WITHOUT CLUTTER</h4>
+          <p>Attention-grabbing elements should support the story rather than overwhelm the composition.</p>
+        </article>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -1614,7 +1924,7 @@ img.is-missing { visibility: hidden; }
 <section class="section" id="process" data-nav="method" aria-labelledby="processTitle">
   <div class="container">
     <div class="section-head reveal">
-      <p class="label">08 — PROCESS</p>
+      <p class="label">10 — PROCESS</p>
       <h2 class="h2" id="processTitle">FROM TITLE TO THUMBNAIL.</h2>
     </div>
 
@@ -1637,8 +1947,8 @@ img.is-missing { visibility: hidden; }
     <img src="bodycam-02.png" alt="" loading="lazy">
   </div>
   <div class="container">
-    <h2 class="cta-title reveal" id="ctaTitle">HAVE A STORY THAT NEEDS A THUMBNAIL?</h2>
-    <p class="cta-sub reveal" style="--d:.1s">LET'S TURN THE IDEA INTO A VISUAL.</p>
+    <h2 class="cta-title reveal" id="ctaTitle">LET'S CREATE THUMBNAILS PEOPLE NOTICE.</h2>
+    <p class="cta-sub reveal" style="--d:.1s">Available for YouTube thumbnail design, AI-assisted creative work, and compilation-channel projects.</p>
 
     <div class="btn-row reveal" style="--d:.2s">
       <a class="btn btn-primary" href="mailto:aljayjosh@gmail.com?subject=Thumbnail%20project">LET'S WORK TOGETHER <span class="arr" aria-hidden="true">→</span></a>
@@ -1980,6 +2290,83 @@ const PROJECTS = [
       { stage: "Final Thumbnail", note: "The strongest direction was developed into the final thumbnail." }
     ]
   },
+
+  /* ---------------- YOUTUBE COMPILATION THUMBNAIL TEST — application case study ---------------- */
+  {
+    number: "01",
+    type: "cae",
+    category: "MEMES",
+    cardCategory: "MEMES",
+    title: "Funniest Moments Caught on Camera",
+    image: "cae-meme-01.png",
+    alt: "YouTube thumbnail: a man in a red life vest sprawled backward on a dirt mound, his startled face circled and marked with a red arrow, with a laughing-crying emoji in the top-left corner.",
+    tags: ["AI-ASSISTED", "YOUTUBE", "16:9", "MEME"],
+    concept: "A reaction-driven meme thumbnail designed around an instantly understandable funny moment. The composition uses strong visual emphasis, expressive reactions, and simple attention cues without overcrowding the frame.",
+    visualDirection: [
+      { label: "Composition", text: "The subject's fall fills the frame diagonally across a dirt mound, with the circle and arrow placed in the open sky above him so they don't compete with the action itself." },
+      { label: "Subject", text: "A man in a red life vest, caught mid-fall backward onto a mound of dirt, arms out and face turned up." },
+      { label: "CAE — Circle", text: "A circle isolates his startled facial expression, the exact detail that makes the moment read as funny rather than just chaotic." },
+      { label: "CAE — Arrow", text: "A red arrow sweeps from the top of the frame down into the circle, giving the eye a clear path to the reaction." },
+      { label: "CAE — Emoji", text: "A laughing-crying emoji in the top-left corner states the intended tone immediately, before the viewer has even parsed the scene." },
+      { label: "Readability", text: "High-contrast red graphics against the pale dirt and stone-wall background keep every CAE element legible at thumbnail size." }
+    ],
+    workflow: [
+      { stage: "ChatGPT", note: "Analyzed the “funniest moments caught on camera” brief and shaped a concept built around a single, instantly readable fall-and-reaction moment." },
+      { stage: "Gemini / AI Generation", note: "Generated and explored the visual direction described in the prompt." },
+      { stage: "Editing", note: "Composed the circle, arrow, and emoji placement so they guide attention without covering the subject." },
+      { stage: "Final Thumbnail", note: "The strongest direction was developed into this application thumbnail test." }
+    ]
+  },
+  {
+    number: "02",
+    type: "cae",
+    category: "FUNNY & CUTE CATS",
+    cardCategory: "FUNNY & CUTE CATS",
+    title: "Funniest Cats You Can't Stop Laughing At",
+    image: "cae-cat-01.png",
+    alt: "YouTube thumbnail: a close-up of a cat's face with its eyes closed, a small composited creature's face circled at its chin and marked with a red arrow, with a laughing-crying emoji in the top-right corner.",
+    tags: ["AI-ASSISTED", "YOUTUBE", "16:9", "FUNNY CATS"],
+    concept: "A playful cat compilation thumbnail focused on expression, humor, and instant visual clarity. The cat is treated as the primary focal point so the joke can be understood immediately at thumbnail size.",
+    visualDirection: [
+      { label: "Composition", text: "The cat's face fills almost the entire frame so its calm expression reads first, with the circled detail placed right at its chin where the joke lives." },
+      { label: "Subject", text: "A black-and-white cat with its eyes closed in a content, sleepy expression." },
+      { label: "CAE — Circle", text: "A circle isolates the small, oddly expressive creature's face composited at the cat's chin, the single detail the whole thumbnail is built around." },
+      { label: "CAE — Arrow", text: "A red arrow points from the top-right corner down into the circle, making sure the eye doesn't miss the detail on a first glance." },
+      { label: "CAE — Emoji", text: "A laughing-crying emoji in the top-right corner signals the tone is comedic before the viewer even registers the circled detail." },
+      { label: "Readability", text: "The cat's calm, soft-focus face keeps the frame uncluttered, so the one bright red CAE callout is the only thing competing for attention." }
+    ],
+    workflow: [
+      { stage: "ChatGPT", note: "Analyzed the “funny cats” brief and shaped a concept that keeps the cat as the primary focal point while isolating a single comedic detail." },
+      { stage: "Gemini / AI Generation", note: "Generated and explored the visual direction described in the prompt." },
+      { stage: "Editing", note: "Positioned the circle, arrow, and emoji so the joke reads instantly without crowding the cat's face." },
+      { stage: "Final Thumbnail", note: "The strongest direction was developed into this application thumbnail test." }
+    ]
+  },
+  {
+    number: "03",
+    type: "cae",
+    category: "FAST WORKERS / SATISFYING WORKERS",
+    cardCategory: "FAST WORKERS / SATISFYING WORKERS",
+    title: "Machines & Workers That Are Seriously Satisfying",
+    image: "cae-worker-01.png",
+    alt: "YouTube thumbnail: a bartender performing a flair pour across a long chain of stacked metal cups into rows of martini glasses, the chain circled and marked with a red arrow, with a shocked-face emoji in the top-left corner, in front of a watching crowd.",
+    tags: ["AI-ASSISTED", "YOUTUBE", "16:9", "SATISFYING"],
+    concept: "An action-focused thumbnail designed around an impressive worker and process. Strong contrast, visual movement, and a clear focal point create curiosity while keeping the subject immediately understandable.",
+    visualDirection: [
+      { label: "Composition", text: "The bartender's pour forms a diagonal line of stacked cups running through the center of the frame, with a watching crowd filling the background to confirm the moment is genuinely impressive." },
+      { label: "Subject", text: "A bartender in a white shirt and vest, mid-pour, balancing a long chain of stacked metal cups above rows of martini glasses." },
+      { label: "CAE — Circle", text: "A circle isolates the stacked chain of cups mid-pour, the exact mechanic that makes the shot satisfying to watch." },
+      { label: "CAE — Arrow", text: "A red arrow traces from the top of the frame down to the circled pour, directing the eye to the process rather than the crowd around it." },
+      { label: "CAE — Emoji", text: "A shocked-face emoji in the top-left corner signals that what's happening is worth a second look." },
+      { label: "Readability", text: "The dark curtained background keeps the bright glassware and red CAE graphics as the clear focal points of the frame." }
+    ],
+    workflow: [
+      { stage: "ChatGPT", note: "Analyzed the “satisfying workers” brief and shaped a concept built around an impressive, skill-based process shot." },
+      { stage: "Gemini / AI Generation", note: "Generated and explored the visual direction described in the prompt." },
+      { stage: "Editing", note: "Placed the circle, arrow, and emoji to highlight the pour itself without hiding the scale of the room." },
+      { stage: "Final Thumbnail", note: "The strongest direction was developed into this application thumbnail test." }
+    ]
+  },
   /* ---------------- CATEGORY 01 — IMPROVED THUMBNAILS ---------------- */
   {
     number: "01",
@@ -2128,6 +2515,7 @@ const TYPES = {
   bodycam:  { short: "SPEC",     note: "Spec / portfolio sample \u2014 created to demonstrate thumbnail concepts for police bodycam and true-crime channels. Not affiliated with, and not used by, any real channel." },
   growth:   { short: "FEATURED", note: "A completed thumbnail design for this video concept." },
   latest:   { short: "LATEST",   note: "A new thumbnail concept created for a compilation-style video." },
+  cae:      { short: "CASE STUDY", note: "An AI-generated thumbnail created for a YouTube compilation-channel application test, using the CAE (Circle, Arrow, Emoji) visual attention system." },
   improved: { short: "IMPROVED", note: "An improvement of an existing thumbnail concept." },
   new:      { short: "NEW",      note: "A new thumbnail concept created from the provided title as channel test work." }
 };
@@ -2208,6 +2596,21 @@ const TYPES = {
       </div>
     </article>`;
 
+  // YouTube Compilation Thumbnail Test — application case study cards
+  const caeCard = (p, i) => `
+    <article class="feature-card reveal" data-project="${i}" style="--d:${(i * 0.08).toFixed(2)}s">
+      <div class="feature-media">
+        <img src="${esc(p.image)}" alt="${esc(p.alt)}" width="1024" height="572" loading="lazy">
+        <span class="feature-badge" aria-hidden="true">CASE STUDY</span>
+      </div>
+      <div class="feature-info">
+        <p class="feature-cat">${esc(p.cardCategory)}</p>
+        <h3 class="feature-title">${esc(p.title)}</h3>
+        <div class="tag-row">${p.tags.map((t) => `<span class="tag">${esc(t)}</span>`).join('')}</div>
+        ${openButton(p, i)}
+      </div>
+    </article>`;
+
   // Improved Thumbnails — large alternating editorial rows
   const improvedCard = (p, i) => `
     <article class="project reveal" data-project="${i}">
@@ -2241,12 +2644,14 @@ const TYPES = {
   const featuredEl = $('#projectsFeatured');
   const growthEl = $('#projectsGrowth');
   const latestEl = $('#projectsLatest');
+  const compilationEl = $('#projectsCompilation');
   const improvedEl = $('#projectsImproved');
   const testsEl = $('#projectsNew');
   PROJECTS.forEach((p, i) => {
     if (p.type === 'bodycam') featuredEl.insertAdjacentHTML('beforeend', featuredCard(p, i));
     else if (p.type === 'growth') growthEl.insertAdjacentHTML('beforeend', growthCard(p, i));
     else if (p.type === 'latest') latestEl.insertAdjacentHTML('beforeend', latestCard(p, i));
+    else if (p.type === 'cae') compilationEl.insertAdjacentHTML('beforeend', caeCard(p, i));
     else if (p.type === 'improved') improvedEl.insertAdjacentHTML('beforeend', improvedCard(p, i));
     else testsEl.insertAdjacentHTML('beforeend', testCard(p, i));
   });
